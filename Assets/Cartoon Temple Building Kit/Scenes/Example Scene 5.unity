@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 10
+    serializedVersion: 12
     m_Resolution: 2
     m_BakeResolution: 2
     m_AtlasSize: 2048
@@ -62,6 +62,7 @@ LightmapSettings:
     m_AOMaxDistance: 0.2
     m_CompAOExponent: 3.35
     m_CompAOExponentDirect: 1.1
+    m_ExtractAmbientOcclusion: 0
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
@@ -74,12 +75,18 @@ LightmapSettings:
     m_BakeBackend: 0
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
-    m_PVRSampleCount: 500
+    m_PVRSampleCount: 512
     m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 512
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 0
+    m_PVRDenoiserTypeDirect: 0
+    m_PVRDenoiserTypeIndirect: 0
+    m_PVRDenoiserTypeAO: 0
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
-    m_PVRFilteringMode: 0
+    m_PVREnvironmentMIS: 0
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
@@ -88,6 +95,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
+    m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 112000001, guid: c03efcba7aa0d5047bbab234447fc272,
     type: 2}
   m_UseShadowmask: 0
@@ -409,14 +417,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 259.753
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012794338952, guid: b37206dfe6186374398267e26322b759, type: 3}
+      propertyPath: m_Name
+      value: Single Cube 4 (6)
+      objectReference: {fileID: 0}
     - target: {fileID: 23000011012032814, guid: b37206dfe6186374398267e26322b759,
         type: 3}
       propertyPath: m_ScaleInLightmap
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000012794338952, guid: b37206dfe6186374398267e26322b759, type: 3}
-      propertyPath: m_Name
-      value: Single Cube 4 (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b37206dfe6186374398267e26322b759, type: 3}
@@ -785,7 +793,7 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3981943
       objectReference: {fileID: 0}
-    - target: {fileID: 23000010402823022, guid: d515a93a5b4c1d44f838a8669ec9c8d0,
+    - target: {fileID: 23000011035406716, guid: d515a93a5b4c1d44f838a8669ec9c8d0,
         type: 3}
       propertyPath: m_ReceiveShadows
       value: 0
@@ -802,12 +810,12 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.25
       objectReference: {fileID: 0}
-    - target: {fileID: 23000011035406716, guid: d515a93a5b4c1d44f838a8669ec9c8d0,
+    - target: {fileID: 23000012809346048, guid: d515a93a5b4c1d44f838a8669ec9c8d0,
         type: 3}
       propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 23000012809346048, guid: d515a93a5b4c1d44f838a8669ec9c8d0,
+    - target: {fileID: 23000010402823022, guid: d515a93a5b4c1d44f838a8669ec9c8d0,
         type: 3}
       propertyPath: m_ReceiveShadows
       value: 0
@@ -1108,12 +1116,13 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738869476}
   m_Enabled: 1
-  serializedVersion: 8
+  serializedVersion: 9
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2.5
   m_Range: 10
   m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -1123,6 +1132,24 @@ Light:
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
@@ -1130,12 +1157,15 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  m_RenderingLayerMask: 1
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &738869478
@@ -1555,14 +1585,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.115
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012794338952, guid: b37206dfe6186374398267e26322b759, type: 3}
+      propertyPath: m_Name
+      value: Single Cube 4 (10)
+      objectReference: {fileID: 0}
     - target: {fileID: 23000011012032814, guid: b37206dfe6186374398267e26322b759,
         type: 3}
       propertyPath: m_ScaleInLightmap
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000012794338952, guid: b37206dfe6186374398267e26322b759, type: 3}
-      propertyPath: m_Name
-      value: Single Cube 4 (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b37206dfe6186374398267e26322b759, type: 3}
@@ -1629,7 +1659,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
+  m_StitchLightmapSeams: 1
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -1859,14 +1889,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.115
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012794338952, guid: b37206dfe6186374398267e26322b759, type: 3}
+      propertyPath: m_Name
+      value: Single Cube 4 (9)
+      objectReference: {fileID: 0}
     - target: {fileID: 23000011012032814, guid: b37206dfe6186374398267e26322b759,
         type: 3}
       propertyPath: m_ScaleInLightmap
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000012794338952, guid: b37206dfe6186374398267e26322b759, type: 3}
-      propertyPath: m_Name
-      value: Single Cube 4 (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b37206dfe6186374398267e26322b759, type: 3}
@@ -2085,6 +2115,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plants Hanging 1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4000013944774178, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.017
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013944774178, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013944774178, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.308
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013496183820, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0.42554998
@@ -2116,18 +2158,6 @@ PrefabInstance:
     - target: {fileID: 4000013496183820, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013944774178, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.017
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013944774178, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013944774178, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.308
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
@@ -2273,9 +2303,10 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.32175454, g: 0.3455882, b: 0.30238968, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -2392,14 +2423,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 84.866005
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012794338952, guid: b37206dfe6186374398267e26322b759, type: 3}
+      propertyPath: m_Name
+      value: Single Cube 4 (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 23000011012032814, guid: b37206dfe6186374398267e26322b759,
         type: 3}
       propertyPath: m_ScaleInLightmap
       value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000012794338952, guid: b37206dfe6186374398267e26322b759, type: 3}
-      propertyPath: m_Name
-      value: Single Cube 4 (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b37206dfe6186374398267e26322b759, type: 3}
