@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class DataClass
 {
@@ -13,72 +14,72 @@ public class DataClass
 
         public Characteristics(int mind, int force, int agility, int luck, int speed)
         {
-            this._mind = mind;
-            this._force = force;
-            this._agility = agility;
-            this._luck = luck;
-            this._speed = speed;
+            _mind = mind;
+            _force = force;
+            _agility = agility;
+            _luck = luck;
+            _speed = speed;
         }
 
         public int GetMind()
         {
-            return this._mind;
+            return _mind;
         }
         public int GetForce()
         {
-            return this._force;
+            return _force;
         }
         public int GetAgility()
         {
-            return this._agility;
+            return _agility;
         }
         public int GetLuck()
         {
-            return this._luck;
+            return _luck;
         }
         public int GetSpeed()
         {
-            return this._speed;
+            return _speed;
         }
 
         public void IncreaseMind(int number)
         {
-            this._mind += number;
-            if(this._mind > 100)
+            _mind += number;
+            if(_mind > 100)
             {
-                this._mind = 100;
+                _mind = 100;
             }
         }
         public void IncreaseForce(int number)
         {
-            this._force += number;
-            if(this._force > 100)
+            _force += number;
+            if(_force > 100)
             {
-                this._force = 100;
+                _force = 100;
             }
         }
         public void IncreaseAgility(int number)
         {
-            this._agility += number;
-            if(this._agility > 100)
+            _agility += number;
+            if(_agility > 100)
             {
-                this._agility = 100;
+                _agility = 100;
             }
         }
         public void IncreaseLuck(int number)
         {
-            this._luck += number;
-            if(this._luck > 100)
+            _luck += number;
+            if(_luck > 100)
             {
-                this._luck = 100;
+                _luck = 100;
             }
         }
         public void IncreaseSpeed(int number)
         {
-            this._speed += number;
-            if(this._speed > 100)
+            _speed += number;
+            if(_speed > 100)
             {
-                this._speed = 100;
+                _speed = 100;
             }
         }
     }
@@ -187,5 +188,36 @@ public class DataClass
         {
             this._physicalResist += number;
         }
+    }
+
+    public class Monster
+    {
+        private int _damage;
+        private int _health;
+        private int _typeOfDamage;    // 1 - магический. 2 - физический
+        private int _magicResist;
+        private int _physicalResist;
+        private GameObject _sprite;
+        public Monster(Hero hero, GameObject sprite)
+        {
+            _health = 95 + hero.GetLevel() * 5;
+            _damage = 15 + hero.GetLevel() * 5;
+            _typeOfDamage = Random.Range(1, 2);
+            switch (Random.Range(1, 3))
+            {
+                case 1:
+                    _magicResist = Random.Range(0, hero.GetLevel() * 7);
+                    break;
+                case 2:
+                    _physicalResist = Random.Range(0, hero.GetLevel() * 7);
+                    break;
+                case 3:
+                    _magicResist = Random.Range(0, hero.GetLevel() * 7);
+                    _physicalResist = Random.Range(0, hero.GetLevel() * 7);
+                    break;
+            }
+            _sprite = sprite;
+        }
+
     }
 }
