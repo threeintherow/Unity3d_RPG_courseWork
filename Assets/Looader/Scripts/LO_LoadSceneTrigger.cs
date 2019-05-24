@@ -10,7 +10,7 @@ public class LO_LoadSceneTrigger : MonoBehaviour
 
 	[Header("STRINGS")]
 	public string objectTag;
-	public string sceneName;
+	public int sceneName;
 	public string prefabToLoad;
 
 	private void OnTriggerEnter(Collider other)

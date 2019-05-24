@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class LO_LoadScene : MonoBehaviour
 {
-	public void ChangeToScene (string sceneName)
+	public void ChangeToScene (int scene)
 	{		
-		LO_LoadingScreen.LoadScene(sceneName);
+		LO_LoadingScreen.LoadScene(scene);
 	}
 }

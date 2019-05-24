@@ -87,7 +87,7 @@ public class LO_LoadingScreen : MonoBehaviour
     private AsyncOperation loadingProcess;
 
     // Load a new scene
-    public static void LoadScene(string sceneName)
+    public static void LoadScene(int sceneName)
     {
         // If there isn't a LoadingScreen, then create a new one
         instance = Instantiate(Resources.Load<GameObject>(prefabName)).GetComponent<LO_LoadingScreen>();
