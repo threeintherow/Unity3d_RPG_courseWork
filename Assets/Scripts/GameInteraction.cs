@@ -23,8 +23,23 @@ public class GameInteraction : MonoBehaviour
 
     public void FirstCharacterCreation()
     {
-        DataClass.Hero wizard = new DataClass.Hero(1);
-        DataClass.Hero warrior = new DataClass.Hero(2);
-        DataClass.Hero thief = new DataClass.Hero(3);
+        _hero_1 = new DataClass.Hero(1);
+        _hero_2 = new DataClass.Hero(2);
+        _hero_3 = new DataClass.Hero(3);
     }
+
+    public DataClass.Hero getHero(int index)
+    {
+        switch (index)
+        {
+            case 1:
+                return _hero_1;
+            case 2:
+                return _hero_2;
+            default:
+                return _hero_3;
+        }
+    }
+        
+    
 }
