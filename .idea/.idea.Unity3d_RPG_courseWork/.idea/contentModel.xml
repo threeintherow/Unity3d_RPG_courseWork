@@ -35,6 +35,12 @@
             <e p="LO_SelectStyle.cs" t="Include" />
           </e>
         </e>
+        <e p="LoopAndMusicFree" t="Include">
+          <e p="_readme" t="Include">
+            <e p="readme_en_ver1.3.txt" t="Include" />
+            <e p="readme_jp_ver1.3.txt" t="Include" />
+          </e>
+        </e>
         <e p="Plugins" t="Include">
           <e p="GitHub" t="Include">
             <e p="Editor" t="Include">
