@@ -1,45 +1,47 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameInteraction : MonoBehaviour
 {
-    DataClass dataClass = new DataClass();
+    private readonly System.Random _random = new System.Random();
 
-    public static int currentScene = 0;
-
-    private DataClass.Hero _hero_1;
-
-    private DataClass.Hero _hero_2;
-
-    private DataClass.Hero _hero_3;
-
-    // Start is called before the first frame update
-    void Start()
+    public void SetScene(int level)
     {
-        currentScene = 0;
+        DataInteraction.lastSaved = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(level);
     }
 
-    public void FirstCharacterCreation()
+    public void SetPreviousScene()
     {
-        _hero_1 = new DataClass.Hero(1);
-        _hero_2 = new DataClass.Hero(2);
-        _hero_3 = new DataClass.Hero(3);
+        print(DataInteraction.lastSaved);
+        SceneManager.LoadScene(DataInteraction.lastSaved);
     }
 
-    public DataClass.Hero getHero(int index)
+    public void ShowStatistics()
     {
-        switch (index)
+        DataInteraction.lastSaved = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(1);
+    }
+
+    public void SetNextLevel()
+    {
+        int nextScene = _random.Next(2, SceneManager.sceneCountInBuildSettings);
+        while(nextScene == SceneManager.GetActiveScene().buildIndex)
         {
-            case 1:
-                return _hero_1;
-            case 2:
-                return _hero_2;
-            default:
-                return _hero_3;
+            nextScene = _random.Next(2, SceneManager.sceneCountInBuildSettings);
         }
-    }
+        DataInteraction.lastSaved = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(nextScene);
         
-    
+        //альтернатива
+        //SceneManager.LoadScene(Random.Range(2, SceneManager.sceneCount);
+    }
+
+    public void Continue()
+    {
+        SceneManager.LoadScene(DataInteraction.lastSaved);
+    }
 }

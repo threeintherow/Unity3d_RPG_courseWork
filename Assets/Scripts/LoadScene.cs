@@ -8,13 +8,13 @@ public class LoadScene : MonoBehaviour
 {
     public void SetScene(int level)
     {
-        GameInteraction.currentScene = SceneManager.GetActiveScene().buildIndex;
+        DataInteraction.lastSaved = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(level);
     }
 
     public void SetPreviousScene()
     {
-        print(GameInteraction.currentScene);
-        SceneManager.LoadScene(GameInteraction.currentScene);
+        print(DataInteraction.lastSaved);
+        SceneManager.LoadScene(DataInteraction.lastSaved);
     }
 }
