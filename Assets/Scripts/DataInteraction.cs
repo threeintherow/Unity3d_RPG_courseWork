@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DataInteraction : MonoBehaviour
+public static class DataInteraction
 {
 
     private static bool _music = true;
@@ -11,18 +11,18 @@ public class DataInteraction : MonoBehaviour
 
     public static int lastSaved = 0;
 
-    public static DataClass.Hero hero1;
+    public static DataClass.Hero hero1 = new DataClass.Hero(1);
 
-    public static DataClass.Hero hero2;
+    public static DataClass.Hero hero2 = new DataClass.Hero(2);
 
-    public static DataClass.Hero hero3;
+    public static DataClass.Hero hero3 = new DataClass.Hero(3);
     
-    public static void FirstCharacterCreation()
-    {
-        hero1 = new DataClass.Hero(1);
-        hero2 = new DataClass.Hero(2);
-        hero3 = new DataClass.Hero(3);
-    }
+//    public static void FirstCharacterCreation()
+//    {
+//        hero1 = new DataClass.Hero(1);
+//        hero2 = new DataClass.Hero(2);
+//        hero3 = new DataClass.Hero(3);
+//    }
 
     public static DataClass.Hero GetHero(int index)
     {
