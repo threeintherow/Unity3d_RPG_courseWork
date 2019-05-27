@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/3D/TestScene.unity
     guid: b7616a2044d319f4788ff48ec5933d3f
+  - enabled: 1
+    path: Assets/Scenes/3D/TestScene2.unity
+    guid: 4fe798682ab7e5544a8fec93a4e0a7de
   - enabled: 0
     path: Assets/Scenes/Primary/PrimaryScene.unity
     guid: f75736d9665bc1340962cb12fd3480a7
