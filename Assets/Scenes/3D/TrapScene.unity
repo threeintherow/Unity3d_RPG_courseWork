@@ -235,7 +235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 496, y: 499}
+  m_AnchoredPosition: {x: 496, y: -234}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &122115500
@@ -19335,7 +19335,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368814038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1346928883}
@@ -19344,7 +19344,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 852, y: 500}
+  m_AnchoredPosition: {x: 760, y: 426}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &368814040
@@ -19390,9 +19390,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: SetScene
-        m_Mode: 3
+      - m_Target: {fileID: 1089522876}
+        m_MethodName: SetNextLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -24146,10 +24146,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2125309954}
     m_Modifications:
-    - target: {fileID: 152550, guid: c8dc2031dea625e46a42a7c1688cf26d, type: 3}
-      propertyPath: m_Name
-      value: Pf_Trap_Fire
-      objectReference: {fileID: 0}
     - target: {fileID: 452550, guid: c8dc2031dea625e46a42a7c1688cf26d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.78
@@ -24205,6 +24201,10 @@ PrefabInstance:
     - target: {fileID: 452550, guid: c8dc2031dea625e46a42a7c1688cf26d, type: 3}
       propertyPath: m_LocalScale.z
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 152550, guid: c8dc2031dea625e46a42a7c1688cf26d, type: 3}
+      propertyPath: m_Name
+      value: Pf_Trap_Fire
       objectReference: {fileID: 0}
     - target: {fileID: 11152550, guid: c8dc2031dea625e46a42a7c1688cf26d, type: 3}
       propertyPath: m_PlayAutomatically
@@ -29313,7 +29313,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765109955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1332319505}
@@ -29322,7 +29322,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -824, y: 492}
+  m_AnchoredPosition: {x: -824, y: 434}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &765109957
@@ -29431,10 +29431,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1613706919}
     m_Modifications:
-    - target: {fileID: 100000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
-      propertyPath: m_Name
-      value: Wall
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30.10849
@@ -29490,6 +29486,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.8770894
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
+      propertyPath: m_Name
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
@@ -29751,10 +29751,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1613706919}
     m_Modifications:
-    - target: {fileID: 100000, guid: 38cb9c677cc9cf849a7e755877f61eb5, type: 3}
-      propertyPath: m_Name
-      value: Wall
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 38cb9c677cc9cf849a7e755877f61eb5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.99151
@@ -29806,6 +29802,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 38cb9c677cc9cf849a7e755877f61eb5, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5266991
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 38cb9c677cc9cf849a7e755877f61eb5, type: 3}
+      propertyPath: m_Name
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38cb9c677cc9cf849a7e755877f61eb5, type: 3}
@@ -29859,10 +29859,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1613706919}
     m_Modifications:
-    - target: {fileID: 100000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
-      propertyPath: m_Name
-      value: Wall
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 22.191511
@@ -29918,6 +29914,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.8770884
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
+      propertyPath: m_Name
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
@@ -34825,10 +34825,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1613706919}
     m_Modifications:
-    - target: {fileID: 100000, guid: 38cb9c677cc9cf849a7e755877f61eb5, type: 3}
-      propertyPath: m_Name
-      value: Wall (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 38cb9c677cc9cf849a7e755877f61eb5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.5
@@ -34880,6 +34876,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 38cb9c677cc9cf849a7e755877f61eb5, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5267007
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 38cb9c677cc9cf849a7e755877f61eb5, type: 3}
+      propertyPath: m_Name
+      value: Wall (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38cb9c677cc9cf849a7e755877f61eb5, type: 3}
@@ -35023,10 +35023,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2125309954}
     m_Modifications:
-    - target: {fileID: 152550, guid: c8dc2031dea625e46a42a7c1688cf26d, type: 3}
-      propertyPath: m_Name
-      value: Pf_Trap_Fire
-      objectReference: {fileID: 0}
     - target: {fileID: 452550, guid: c8dc2031dea625e46a42a7c1688cf26d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.2571115
@@ -35082,6 +35078,10 @@ PrefabInstance:
     - target: {fileID: 452550, guid: c8dc2031dea625e46a42a7c1688cf26d, type: 3}
       propertyPath: m_LocalScale.z
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 152550, guid: c8dc2031dea625e46a42a7c1688cf26d, type: 3}
+      propertyPath: m_Name
+      value: Pf_Trap_Fire
       objectReference: {fileID: 0}
     - target: {fileID: 11152550, guid: c8dc2031dea625e46a42a7c1688cf26d, type: 3}
       propertyPath: m_PlayAutomatically
@@ -40061,10 +40061,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2125309954}
     m_Modifications:
-    - target: {fileID: 152550, guid: c8dc2031dea625e46a42a7c1688cf26d, type: 3}
-      propertyPath: m_Name
-      value: Pf_Trap_Fire
-      objectReference: {fileID: 0}
     - target: {fileID: 452550, guid: c8dc2031dea625e46a42a7c1688cf26d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.784399
@@ -40120,6 +40116,10 @@ PrefabInstance:
     - target: {fileID: 452550, guid: c8dc2031dea625e46a42a7c1688cf26d, type: 3}
       propertyPath: m_LocalScale.z
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 152550, guid: c8dc2031dea625e46a42a7c1688cf26d, type: 3}
+      propertyPath: m_Name
+      value: Pf_Trap_Fire
       objectReference: {fileID: 0}
     - target: {fileID: 11152550, guid: c8dc2031dea625e46a42a7c1688cf26d, type: 3}
       propertyPath: m_PlayAutomatically
@@ -40322,10 +40322,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1613706919}
     m_Modifications:
-    - target: {fileID: 100000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
-      propertyPath: m_Name
-      value: Wall
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.791512
@@ -40381,6 +40377,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.8770883
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
+      propertyPath: m_Name
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
@@ -50186,10 +50186,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 828325223}
     m_Modifications:
-    - target: {fileID: 100000, guid: 31ebd80d3f64ab74b98898947c055382, type: 3}
-      propertyPath: m_Name
-      value: Gate
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 31ebd80d3f64ab74b98898947c055382, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.4084895
@@ -50233,6 +50229,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 31ebd80d3f64ab74b98898947c055382, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 31ebd80d3f64ab74b98898947c055382, type: 3}
+      propertyPath: m_Name
+      value: Gate
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 31ebd80d3f64ab74b98898947c055382, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -59651,10 +59651,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1576602621}
     m_Modifications:
-    - target: {fileID: 100000, guid: b2fa3fb20b986114f94dfa86ff76242a, type: 3}
-      propertyPath: m_Name
-      value: Idol 6
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b2fa3fb20b986114f94dfa86ff76242a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21.90849
@@ -59710,6 +59706,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: b2fa3fb20b986114f94dfa86ff76242a, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0263048
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b2fa3fb20b986114f94dfa86ff76242a, type: 3}
+      propertyPath: m_Name
+      value: Idol 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2fa3fb20b986114f94dfa86ff76242a, type: 3}

@@ -40,8 +40,53 @@ public class GameInteraction : MonoBehaviour
         //SceneManager.LoadScene(Random.Range(2, SceneManager.sceneCount);
     }
 
+    public void SaveData()
+    {
+        string key1 = "Hero1";
+        string key2 = "Hero2";
+        string key3 = "Hero3";
+        DataClass.Hero hero1 = DataInteraction.GetHero(1);
+        DataClass.Hero hero2 = DataInteraction.GetHero(2);
+        DataClass.Hero hero3 = DataInteraction.GetHero(3);
+
+        string savedHero1 = JsonUtility.ToJson(hero1);
+        string savedHero2 = JsonUtility.ToJson(hero2);
+        string savedHero3 = JsonUtility.ToJson(hero3);
+
+        PlayerPrefs.SetString(key1, savedHero1);
+        PlayerPrefs.SetString(key2, savedHero2);
+        PlayerPrefs.SetString(key3, savedHero3);
+        
+        PlayerPrefs.Save();
+
+    }
+
+    public void LoadData()
+    {
+        string key1 = "Hero1";
+        string key2 = "Hero2";
+        string key3 = "Hero3";
+
+        if(PlayerPrefs.HasKey(key1))
+        {
+            string value = PlayerPrefs.GetString(key1);
+            DataInteraction.setHeroDataAfterLoad(JsonUtility.FromJson<DataClass.Hero>(value), 1);
+        }
+        if(PlayerPrefs.HasKey(key2))
+        {
+            string value = PlayerPrefs.GetString(key2);
+            DataInteraction.setHeroDataAfterLoad(JsonUtility.FromJson<DataClass.Hero>(value), 2);
+        }
+        if(PlayerPrefs.HasKey(key3))
+        {
+            string value = PlayerPrefs.GetString(key3);
+            DataInteraction.setHeroDataAfterLoad(JsonUtility.FromJson<DataClass.Hero>(value), 3);
+        }
+    }
+    
     public void Continue()
     {
         SceneManager.LoadScene(DataInteraction.lastSaved);
     }
+
 }

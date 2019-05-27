@@ -197,8 +197,7 @@ public class DataClass
         private int _typeOfDamage;    // 1 - магический. 2 - физический
         private int _magicResist;
         private int _physicalResist;
-        private GameObject _sprite;
-        public Monster(Hero hero, GameObject sprite)
+        public Monster(Hero hero)
         {
             _health = 95 + hero.GetLevel() * 5;
             _damage = 15 + hero.GetLevel() * 5;
@@ -216,7 +215,6 @@ public class DataClass
                     _physicalResist = Random.Range(0, hero.GetLevel() * 7);
                     break;
             }
-            _sprite = sprite;
         }
 
     }
