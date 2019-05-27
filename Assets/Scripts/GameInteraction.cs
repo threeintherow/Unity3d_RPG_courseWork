@@ -8,9 +8,16 @@ public class GameInteraction : MonoBehaviour
 {
     private readonly System.Random _random = new System.Random();
 
-    private DataClass.Monster _monster1 = DataInteraction.CreateNewMonster();
-    private DataClass.Monster _monster2 = DataInteraction.CreateNewMonster();
-    private DataClass.Monster _monster3 = DataInteraction.CreateNewMonster();
+    private DataClass.Monster _monster1;
+    private DataClass.Monster _monster2;
+    private DataClass.Monster _monster3;
+
+    private void Start()
+    {
+        _monster1 = DataInteraction.CreateNewMonster();
+        _monster2 = DataInteraction.CreateNewMonster();
+        _monster3 = DataInteraction.CreateNewMonster();
+    }
 
     public void SetScene(int level)
     {
