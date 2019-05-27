@@ -8,6 +8,10 @@ public class GameInteraction : MonoBehaviour
 {
     private readonly System.Random _random = new System.Random();
 
+    private DataClass.Monster _monster1 = DataInteraction.CreateNewMonster();
+    private DataClass.Monster _monster2 = DataInteraction.CreateNewMonster();
+    private DataClass.Monster _monster3 = DataInteraction.CreateNewMonster();
+
     public void SetScene(int level)
     {
         DataInteraction.lastSaved = SceneManager.GetActiveScene().buildIndex;

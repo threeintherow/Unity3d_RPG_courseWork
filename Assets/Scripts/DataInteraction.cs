@@ -40,9 +40,9 @@ public static class DataInteraction
         }
     }
 
-    public static DataClass.Monster CreateNewMonster(DataClass.Hero hero)
+    public static DataClass.Monster CreateNewMonster()
     {
-        return new DataClass.Monster(hero);
+        return new DataClass.Monster();
     }
 
     public static void TurnOffMusic()
