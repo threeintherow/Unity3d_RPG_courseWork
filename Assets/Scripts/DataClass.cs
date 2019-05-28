@@ -85,7 +85,7 @@ public class DataClass
     }
     public class Hero
     {
-        private int _classOfHero;    // 1 - маг. 2 - воин. 3 - вор
+        private int _classOfHero;    // 1 - воин. 2 - вор. 3 - маг
         private int _health;
         private Characteristics _characteristics;
         private int _damage;
@@ -93,6 +93,8 @@ public class DataClass
         private int _typeOfDamage;    // 1 - магический. 2 - физический
         private int _magicResist;
         private int _physicalResist;
+        
+        
 
         public Hero(int classOfHero, int level = 1)
         {
@@ -108,22 +110,22 @@ public class DataClass
             switch(classOfHero)
             {
                 case 1:
-                    this._characteristics = new Characteristics(78, 55, 60, 60, 40);
-                    this._health = 95 + _level * 5;
-                    this._damage = 10;
-                    this._typeOfDamage = 1;
-                    break;
-                case 2:
                     this._characteristics = new Characteristics(40, 78, 60, 60, 50);
                     this._health = 95 + _level * 5;
                     this._damage = 12;
                     this._typeOfDamage = 2;
                     break;
-                case 3:
+                case 2:                
                     this._characteristics = new Characteristics(50, 60, 70, 65, 70);
                     this._health = 95 + _level * 5;
                     this._damage = 9;
                     this._typeOfDamage = 2;
+                    break;
+                case 3:
+                    this._characteristics = new Characteristics(78, 55, 60, 60, 40);
+                    this._health = 95 + _level * 5;
+                    this._damage = 10;
+                    this._typeOfDamage = 1;
                     break;
             }
         }
@@ -136,6 +138,11 @@ public class DataClass
         private void IncreaseDamage()    //увеличение показателя урона при поднятии уровня
         {
             this._damage += 3;
+        }
+        
+        public int GetСlass()    //возвращение класса персонажа
+        {
+            return this._classOfHero;
         }
         public int GetDamage()    //возвращение урона наносимого персонажем
         {
