@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using Data;
+using UnityEngine;
 
-namespace tests
+namespace Characters
 {
     public class Enemy : MonoBehaviour
     {

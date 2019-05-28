@@ -1,12 +1,13 @@
-﻿using UnityEngine;
-using UnityEngine.Serialization;
+﻿using Data;
+using Game;
+using UnityEngine;
 
-namespace tests
+namespace Characters
 {
     public class Hero : MonoBehaviour
     {
         public GameInteraction gameInteraction;
-        public Data data;
+        public Data.Data data;
         
         public int classOfHero;    // 1 - воин. 2 - вор. 3 - маг
         public int health;

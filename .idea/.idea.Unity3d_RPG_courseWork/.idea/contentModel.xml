@@ -55,19 +55,29 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="DataClass.cs" t="Include" />
-          <e p="DataInteraction.cs" t="Include" />
-          <e p="GameInteraction.cs" t="Include" />
-          <e p="LoadScene.cs" t="Include" />
-          <e p="ManagingScenes.cs" t="Include" />
-          <e p="MenuScript.cs" t="Include" />
-          <e p="OpenChest.cs" t="Include" />
-          <e p="SimpleCameraController.cs" t="Include" />
-          <e p="StatsScript.cs" t="Include" />
-          <e p="tests" t="Include">
-            <e p="Data.cs" t="Include" />
+          <e p="BonusScene" t="Include">
+            <e p="OpenChest.cs" t="Include" />
+          </e>
+          <e p="Characters" t="Include">
             <e p="Enemy.cs" t="Include" />
             <e p="Hero.cs" t="Include" />
+          </e>
+          <e p="Data" t="Include">
+            <e p="Data.cs" t="Include" />
+            <e p="DataInteraction.cs" t="Include" />
+          </e>
+          <e p="Game" t="Include">
+            <e p="GameInteraction.cs" t="Include" />
+            <e p="ManagingScenes.cs" t="Include" />
+          </e>
+          <e p="MainMenu" t="Include">
+            <e p="MenuScript.cs" t="Include" />
+          </e>
+          <e p="StatsScene" t="Include">
+            <e p="StatsScript.cs" t="Include" />
+          </e>
+          <e p="V_dushe_ne_ebu_cho_eto_no_luche_ne_budu_trogat" t="Include">
+            <e p="SimpleCameraController.cs" t="Include" />
           </e>
         </e>
       </e>

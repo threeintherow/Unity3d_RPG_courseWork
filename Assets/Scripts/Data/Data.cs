@@ -1,12 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using tests;
+﻿using Characters;
 using UnityEngine;
 
-public class Data : MonoBehaviour
+namespace Data
 {
+    public class Data : MonoBehaviour
+    {
 
-    /*public void Start()
+        /*public void Start()
     {
         string key1 = "Hero1";
         string key2 = "Hero2";
@@ -27,25 +27,26 @@ public class Data : MonoBehaviour
         PlayerPrefs.Save();
         
     }*/
-    public void SaveData(string key, Hero hero)
-    {
-        
-        string savedHero = JsonUtility.ToJson(hero);
-
-        PlayerPrefs.SetString(key, savedHero);
-        
-        PlayerPrefs.Save();
-
-    }
-
-    public Hero LoadData(string key)
-    {
-        if(PlayerPrefs.HasKey(key))
+        public void SaveData(string key, Hero hero)
         {
-            string value = PlayerPrefs.GetString(key);
-            Hero hero = JsonUtility.FromJson<Hero>(value);
-            return hero;
+        
+            string savedHero = JsonUtility.ToJson(hero);
+
+            PlayerPrefs.SetString(key, savedHero);
+        
+            PlayerPrefs.Save();
+
         }
-        return null;
+
+        public Hero LoadData(string key)
+        {
+            if(PlayerPrefs.HasKey(key))
+            {
+                string value = PlayerPrefs.GetString(key);
+                Hero hero = JsonUtility.FromJson<Hero>(value);
+                return hero;
+            }
+            return null;
+        }
     }
 }
