@@ -44,29 +44,29 @@ public class StatsScript : MonoBehaviour
 
     public void Start()
     {
-        classType1.text = GetClass(DataInteraction.GetHero(1).GetСlass());
-        classType2.text = GetClass(DataInteraction.GetHero(2).GetСlass());
-        classType3.text = GetClass(DataInteraction.GetHero(3).GetСlass());
+        classType1.text = GetClass(DataInteraction.GetHero(1).classOfHero);
+        classType2.text = GetClass(DataInteraction.GetHero(2).classOfHero);
+        classType3.text = GetClass(DataInteraction.GetHero(3).classOfHero);
 
-        damage1.text = DataInteraction.GetHero(1).GetDamage().ToString();
-        damage2.text = DataInteraction.GetHero(2).GetDamage().ToString();
-        damage3.text = DataInteraction.GetHero(3).GetDamage().ToString();
+        damage1.text = DataInteraction.GetHero(1).damage.ToString();
+        damage2.text = DataInteraction.GetHero(2).damage.ToString();
+        damage3.text = DataInteraction.GetHero(3).damage.ToString();
         
-        mind1.text = DataInteraction.GetHero(1).GetCharacteristics().GetMind().ToString();
-        mind2.text = DataInteraction.GetHero(2).GetCharacteristics().GetMind().ToString();       
-        mind3.text = DataInteraction.GetHero(3).GetCharacteristics().GetMind().ToString();
-        force1.text = DataInteraction.GetHero(1).GetCharacteristics().GetForce().ToString();
-        force2.text = DataInteraction.GetHero(2).GetCharacteristics().GetForce().ToString();
-        force3.text = DataInteraction.GetHero(3).GetCharacteristics().GetForce().ToString();
-        agility1.text = DataInteraction.GetHero(1).GetCharacteristics().GetAgility().ToString();
-        agility2.text = DataInteraction.GetHero(2).GetCharacteristics().GetAgility().ToString();
-        agility3.text = DataInteraction.GetHero(3).GetCharacteristics().GetAgility().ToString();
-        luck1.text = DataInteraction.GetHero(1).GetCharacteristics().GetLuck().ToString();
-        luck2.text = DataInteraction.GetHero(2).GetCharacteristics().GetLuck().ToString();
-        luck3.text = DataInteraction.GetHero(3).GetCharacteristics().GetLuck().ToString();
-        speed1.text = DataInteraction.GetHero(1).GetCharacteristics().GetSpeed().ToString();
-        speed2.text = DataInteraction.GetHero(2).GetCharacteristics().GetSpeed().ToString();
-        speed3.text = DataInteraction.GetHero(3).GetCharacteristics().GetSpeed().ToString();        
+        mind1.text = DataInteraction.GetHero(1).mind.ToString();
+        mind2.text = DataInteraction.GetHero(2).mind.ToString();       
+        mind3.text = DataInteraction.GetHero(3).mind.ToString();
+        force1.text = DataInteraction.GetHero(1).force.ToString();
+        force2.text = DataInteraction.GetHero(2).force.ToString();
+        force3.text = DataInteraction.GetHero(3).force.ToString();
+        agility1.text = DataInteraction.GetHero(1).agility.ToString();
+        agility2.text = DataInteraction.GetHero(2).agility.ToString();
+        agility3.text = DataInteraction.GetHero(3).agility.ToString();
+        luck1.text = DataInteraction.GetHero(1).luck.ToString();
+        luck2.text = DataInteraction.GetHero(2).luck.ToString();
+        luck3.text = DataInteraction.GetHero(3).luck.ToString();
+        speed1.text = DataInteraction.GetHero(1).speed.ToString();
+        speed2.text = DataInteraction.GetHero(2).speed.ToString();
+        speed3.text = DataInteraction.GetHero(3).speed.ToString();        
     }
 
     private string GetClass(int index)

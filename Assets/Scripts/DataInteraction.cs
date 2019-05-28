@@ -1,21 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using tests;
 using UnityEngine;
 
-public static class DataInteraction
+public class DataInteraction : MonoBehaviour
 {
-
     private static bool _music = true;
-    
-    private static DataClass dataClass = new DataClass();
-
+   
     public static int lastSaved = 0;
 
-    public static DataClass.Hero hero1 = new DataClass.Hero(1);
-
-    public static DataClass.Hero hero2 = new DataClass.Hero(2);
-
-    public static DataClass.Hero hero3 = new DataClass.Hero(3);
+    public static Hero hero1;
+    public static Hero hero2;
+    public static Hero hero3;
     
 //    public static void FirstCharacterCreation()
 //    {
@@ -24,7 +20,19 @@ public static class DataInteraction
 //        hero3 = new DataClass.Hero(3);
 //    }
 
-    public static DataClass.Hero GetHero(int index)
+    public void Awake()
+    {
+        hero1 = gameObject.AddComponent<Hero>();
+        hero1.SetCh(1);
+        hero2 = gameObject.AddComponent<Hero>();
+        hero2.SetCh(2);
+        hero3 = gameObject.AddComponent<Hero>();
+        hero3.SetCh(3);
+    }
+    
+    
+
+    public static Hero GetHero(int index)
     {
         switch (index)
         {
@@ -38,10 +46,9 @@ public static class DataInteraction
                 return null;
         }
     }
-
-    public static DataClass.Monster CreateNewMonster()
+    public Enemy CreateEnemy()
     {
-        return new DataClass.Monster();
+        return gameObject.AddComponent<Enemy>();
     }
 
     public static void TurnOffMusic()
@@ -54,7 +61,7 @@ public static class DataInteraction
         _music = true;
     }
 
-    public static void setHeroDataAfterLoad(DataClass.Hero hero, int index)
+    public static void setHeroDataAfterLoad(Hero hero, int index)
     {
         switch(index)
         {

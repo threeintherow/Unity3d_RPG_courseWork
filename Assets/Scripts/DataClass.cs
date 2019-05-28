@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DataClass
 {
-    public class Characteristics
+    /*public class Characteristics
     {
         private int _mind;
         private int _force;
@@ -344,5 +344,5 @@ public class DataClass
             }
             return false;
         }
-    }
+    }*/
 }

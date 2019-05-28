@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Aleksey\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Aleksey\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Unity3d_RPG_courseWork.469566606.00" t="ExcludeRecursive" />
-    <e p="F:\Unity3d_RPG_courseWork" t="IncludeRecursive">
+    <e p="C:\MyProgram\GitHub\Unity3d_RPG_courseWork" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -61,17 +59,27 @@
           <e p="DataInteraction.cs" t="Include" />
           <e p="GameInteraction.cs" t="Include" />
           <e p="LoadScene.cs" t="Include" />
+          <e p="ManagingScenes.cs" t="Include" />
           <e p="MenuScript.cs" t="Include" />
           <e p="OpenChest.cs" t="Include" />
-          <e p="SelectableObj.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="StatsScript.cs" t="Include" />
+          <e p="tests" t="Include">
+            <e p="Data.cs" t="Include" />
+            <e p="Enemy.cs" t="Include" />
+            <e p="Hero.cs" t="Include" />
+          </e>
         </e>
       </e>
+      <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
-      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
       <e p="Unity3d_RPG_courseWork.sln" t="IncludeFlat" />
     </e>
+    <e p="C:\Users\Ilya\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Ilya\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Unity3d_RPG_courseWork.-5562592.00" t="ExcludeRecursive" />
   </component>
 </project>
