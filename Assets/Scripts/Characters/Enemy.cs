@@ -25,21 +25,21 @@ namespace Characters
 
         public void CreateEnemy()
         {
-            health = 45 + DataInteraction.GetHero(rnd.Next(1, 3)).level * rnd.Next(5, 20);
+            health = 45 + DataInteraction.GetHero(rnd.Next(1, 4)).level * rnd.Next(5, 21);
             maxHp = health;
-            damage = 15 + DataInteraction.GetHero(rnd.Next(1, 3)).level * rnd.Next(1, 6);
-            typeOfDamage = rnd.Next(1, 2);
-            switch (rnd.Next(1, 3))
+            damage = 15 + DataInteraction.GetHero(rnd.Next(1, 4)).level * rnd.Next(1, 7);
+            typeOfDamage = rnd.Next(1, 3);
+            switch (rnd.Next(1, 4))
             {
                 case 1:
-                    magicResist = rnd.Next(0, DataInteraction.GetHero(rnd.Next(1, 3)).level * 4);
+                    magicResist = rnd.Next(0, DataInteraction.GetHero(rnd.Next(1, 4)).level * 4);
                     break;
                 case 2:
-                    physicalResist = rnd.Next(0, DataInteraction.GetHero(rnd.Next(1, 3)).level * 4);
+                    physicalResist = rnd.Next(0, DataInteraction.GetHero(rnd.Next(1, 4)).level * 4);
                     break;
                 case 3:
-                    magicResist = rnd.Next(0, DataInteraction.GetHero(rnd.Next(1, 3)).level * 4);
-                    physicalResist = rnd.Next(0, DataInteraction.GetHero(rnd.Next(1, 3)).level * 4);
+                    magicResist = rnd.Next(0, DataInteraction.GetHero(rnd.Next(1, 4)).level * 4);
+                    physicalResist = rnd.Next(0, DataInteraction.GetHero(rnd.Next(1, 4)).level * 4);
                     break;
             }
         }
