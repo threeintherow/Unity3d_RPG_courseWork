@@ -15,7 +15,6 @@ namespace Data
         public static Hero hero2;
         public static Hero hero3;
 
-        public static List<Item> items;
 //    public static void FirstCharacterCreation()
 //    {
 //        hero1 = new DataClass.Hero(1);
@@ -27,13 +26,13 @@ namespace Data
         {
             hero1 = gameObject.AddComponent<Hero>();
             hero1.SetCh(1);
+            hero1.listItems.Add(gameObject.AddComponent<Item>(12));
             hero2 = gameObject.AddComponent<Hero>();
             hero2.SetCh(2);
             hero3 = gameObject.AddComponent<Hero>();
             hero3.SetCh(3);
         }
-    
-    
+
 
         public static Hero GetHero(int index)
         {
