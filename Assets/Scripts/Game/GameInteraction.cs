@@ -26,6 +26,7 @@ namespace Game
         public int chosenEnemy = 0;
         public int deadEnemy = 0;
         public int deadHero = 0;
+<<<<<<< HEAD
 
         private void Awake()
         {
