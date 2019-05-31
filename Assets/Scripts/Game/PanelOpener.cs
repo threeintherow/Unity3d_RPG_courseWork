@@ -18,6 +18,11 @@ public class PanelOpener : MonoBehaviour
     public Slider healthSlider;
     public void OnMouseDown()
     {
+            Upt();
+    }
+
+    public void Upt()
+    {
         bool isActive = monsterPanel.activeSelf;
         
         if (gameObject.name.Equals("Slime_Green") || gameObject.name.Equals("Rabbit_Cyan"))
@@ -89,6 +94,6 @@ public class PanelOpener : MonoBehaviour
                 physicalResist.text = monsterBand.monster3.physicalResist.ToString();
                 spellResist.text = monsterBand.monster3.magicResist.ToString();  
             }                
-        }        
+        }    
     }
 }

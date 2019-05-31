@@ -10,6 +10,7 @@ namespace Game
     {
         private readonly System.Random _random = new System.Random();
 
+        public PanelOpener panelOpener;
         public GameObject gameObject;
         public MonsterBand monsterBand;
         
@@ -122,6 +123,7 @@ namespace Game
                         }
                         break;
                 }
+                panelOpener.Upt();
                 heroTurn = true;
                 turnEnemy++;
                 if(turnEnemy > 3)
@@ -233,6 +235,9 @@ namespace Game
                         break;
                 }
 
+                panelOpener.Upt();
+                heroTurn = false;
+                
                 if(deadEnemy > 3)
                 {
                     SceneManager.LoadScene(Random.Range(2, SceneManager.sceneCountInBuildSettings));
