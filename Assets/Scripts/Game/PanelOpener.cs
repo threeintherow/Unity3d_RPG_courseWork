@@ -8,7 +8,7 @@ public class PanelOpener : MonoBehaviour
 {
     public GameObject monsterPanel;
     public GameInteraction gameInteraction;
-    public MonsterInteraction monsterInteraction;
+    public MonsterBand monsterBand;
 
     public Text damage;
     public Text physicalResist;
@@ -20,74 +20,74 @@ public class PanelOpener : MonoBehaviour
     {
         bool isActive = monsterPanel.activeSelf;
         
-        if (gameObject.name.Equals("Slime_Green"))
+        if (gameObject.name.Equals("Slime_Green") || gameObject.name.Equals("Rabbit_Cyan"))
         {
             if (!isActive)
             {
                 monsterPanel.SetActive(true);
-                healthSlider.maxValue = monsterInteraction.enemy1.maxHp;
-                healthSlider.value = monsterInteraction.enemy1.health;               
-                health.text = monsterInteraction.enemy1.health.ToString() + "/" + monsterInteraction.enemy1.maxHp.ToString();
-                damage.text = monsterInteraction.enemy1.damage.ToString();
-                physicalResist.text = monsterInteraction.enemy1.physicalResist.ToString();
-                spellResist.text = monsterInteraction.enemy1.magicResist.ToString();
+                healthSlider.maxValue = monsterBand.monster1.maxHp;
+                healthSlider.value = monsterBand.monster1.health;               
+                health.text = monsterBand.monster1.health.ToString() + "/" + monsterBand.monster1.maxHp.ToString();
+                damage.text = monsterBand.monster1.damage.ToString();
+                physicalResist.text = monsterBand.monster1.physicalResist.ToString();
+                spellResist.text = monsterBand.monster1.magicResist.ToString();
             }
             else
             {
-                healthSlider.maxValue = monsterInteraction.enemy1.maxHp;
-                healthSlider.value = monsterInteraction.enemy1.health;
-                health.text = monsterInteraction.enemy1.health.ToString() + "/" + monsterInteraction.enemy1.maxHp.ToString();
-                damage.text = monsterInteraction.enemy1.damage.ToString();
-                physicalResist.text = monsterInteraction.enemy1.physicalResist.ToString();
-                spellResist.text = monsterInteraction.enemy1.magicResist.ToString();
+                healthSlider.maxValue = monsterBand.monster1.maxHp;
+                healthSlider.value = monsterBand.monster1.health;
+                health.text = monsterBand.monster1.health.ToString() + "/" + monsterBand.monster1.maxHp.ToString();
+                damage.text = monsterBand.monster1.damage.ToString();
+                physicalResist.text = monsterBand.monster1.physicalResist.ToString();
+                spellResist.text = monsterBand.monster1.magicResist.ToString();
     
             }       
         }
-        else if (gameObject.name.Equals("Bat_Green"))
+        else if (gameObject.name.Equals("Bat_Green") || gameObject.name.Equals("Rabbit_Red"))
         {
             if (!isActive)
             {
                 monsterPanel.SetActive(true);
-                healthSlider.maxValue = monsterInteraction.enemy2.maxHp;
-                healthSlider.value = monsterInteraction.enemy2.health;               
-                health.text = monsterInteraction.enemy2.health.ToString() + "/" + monsterInteraction.enemy2.maxHp.ToString();
-                damage.text = monsterInteraction.enemy2.damage.ToString();
-                physicalResist.text = monsterInteraction.enemy2.physicalResist.ToString();
-                spellResist.text = monsterInteraction.enemy2.magicResist.ToString();
+                healthSlider.maxValue = monsterBand.monster2.maxHp;
+                healthSlider.value = monsterBand.monster2.health;               
+                health.text = monsterBand.monster2.health.ToString() + "/" + monsterBand.monster2.maxHp.ToString();
+                damage.text = monsterBand.monster2.damage.ToString();
+                physicalResist.text = monsterBand.monster2.physicalResist.ToString();
+                spellResist.text = monsterBand.monster2.magicResist.ToString();
             }
             else
             {
-                healthSlider.maxValue = monsterInteraction.enemy2.maxHp;
-                healthSlider.value = monsterInteraction.enemy2.health;
-                health.text = monsterInteraction.enemy2.health.ToString() + "/" + monsterInteraction.enemy2.maxHp.ToString();
-                damage.text = monsterInteraction.enemy2.damage.ToString();
-                physicalResist.text = monsterInteraction.enemy2.physicalResist.ToString();
-                spellResist.text = monsterInteraction.enemy2.magicResist.ToString();
+                healthSlider.maxValue = monsterBand.monster2.maxHp;
+                healthSlider.value = monsterBand.monster2.health;
+                health.text = monsterBand.monster2.health.ToString() + "/" + monsterBand.monster2.maxHp.ToString();
+                damage.text = monsterBand.monster2.damage.ToString();
+                physicalResist.text = monsterBand.monster2.physicalResist.ToString();
+                spellResist.text = monsterBand.monster2.magicResist.ToString();
     
             }       
         }
-        else if (gameObject.name.Equals("Ghost_Violet"))
+        else if (gameObject.name.Equals("Ghost_Violet") || gameObject.name.Equals("Rabbit_Yellow"))
         {
             
             if (isActive)
             {
-                healthSlider.maxValue = monsterInteraction.enemy3.maxHp;
-                healthSlider.value = monsterInteraction.enemy3.health;
-                health.text = monsterInteraction.enemy3.health.ToString() + "/" + monsterInteraction.enemy3.maxHp.ToString();
-                damage.text = monsterInteraction.enemy3.damage.ToString();
-                physicalResist.text = monsterInteraction.enemy3.physicalResist.ToString();
-                spellResist.text = monsterInteraction.enemy3.magicResist.ToString();
+                healthSlider.maxValue = monsterBand.monster3.maxHp;
+                healthSlider.value = monsterBand.monster3.health;
+                health.text = monsterBand.monster3.health.ToString() + "/" + monsterBand.monster3.maxHp.ToString();
+                damage.text = monsterBand.monster3.damage.ToString();
+                physicalResist.text = monsterBand.monster3.physicalResist.ToString();
+                spellResist.text = monsterBand.monster3.magicResist.ToString();
                 
             }
             else
             {
                 monsterPanel.SetActive(true);
-                healthSlider.maxValue = monsterInteraction.enemy3.maxHp;
-                healthSlider.value = monsterInteraction.enemy3.health;
-                health.text = monsterInteraction.enemy3.health.ToString() + "/" + monsterInteraction.enemy3.maxHp.ToString();                
-                damage.text = monsterInteraction.enemy3.damage.ToString();
-                physicalResist.text = monsterInteraction.enemy3.physicalResist.ToString();
-                spellResist.text = monsterInteraction.enemy3.magicResist.ToString();  
+                healthSlider.maxValue = monsterBand.monster3.maxHp;
+                healthSlider.value = monsterBand.monster3.health;
+                health.text = monsterBand.monster3.health.ToString() + "/" + monsterBand.monster3.maxHp.ToString();                
+                damage.text = monsterBand.monster3.damage.ToString();
+                physicalResist.text = monsterBand.monster3.physicalResist.ToString();
+                spellResist.text = monsterBand.monster3.magicResist.ToString();  
             }                
         }        
     }
