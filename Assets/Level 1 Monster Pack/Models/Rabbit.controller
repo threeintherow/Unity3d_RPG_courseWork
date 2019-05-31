@@ -1,11 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!1101 &-8101562182495940265
 AnimatorStateTransition:
+=======
+--- !u!1102 &-5406592150630027461
+AnimatorState:
+  serializedVersion: 5
+>>>>>>> 7f55358ba680890f9564e244d47df4ac30655ca7
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
@@ -25,6 +32,27 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+=======
+  m_Name: rabbit_die
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400008, guid: 05b0336cad2ece64b99ce054ed619f4c, type: 3}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+>>>>>>> 7f55358ba680890f9564e244d47df4ac30655ca7
 --- !u!1102 &-1685431629173410408
 AnimatorState:
   serializedVersion: 5
@@ -80,6 +108,7 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+<<<<<<< HEAD
 --- !u!1102 &3135205486355044913
 AnimatorState:
   serializedVersion: 5
@@ -106,6 +135,8 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+=======
+>>>>>>> 7f55358ba680890f9564e244d47df4ac30655ca7
 --- !u!1107 &6221905622137339670
 AnimatorStateMachine:
   serializedVersion: 5
@@ -119,8 +150,13 @@ AnimatorStateMachine:
     m_State: {fileID: -1685431629173410408}
     m_Position: {x: 40, y: 120, z: 0}
   - serializedVersion: 1
+<<<<<<< HEAD
     m_State: {fileID: 3135205486355044913}
     m_Position: {x: 320, y: 20, z: 0}
+=======
+    m_State: {fileID: -5406592150630027461}
+    m_Position: {x: 350, y: 120, z: 0}
+>>>>>>> 7f55358ba680890f9564e244d47df4ac30655ca7
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
