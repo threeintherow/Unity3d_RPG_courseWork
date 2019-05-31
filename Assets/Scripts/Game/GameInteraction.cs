@@ -28,6 +28,9 @@ namespace Game
         public int deadHero = 0;
 <<<<<<< HEAD
 
+=======
+      
+>>>>>>> bbb0be64ec0b0e653fd8a628d05a6e4457a9fba6
         private void Awake()
         {
             turnhero = 1;
