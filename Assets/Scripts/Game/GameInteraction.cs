@@ -2,6 +2,7 @@
 using Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 namespace Game
 {
@@ -19,9 +20,10 @@ namespace Game
 
         public bool heroTurn = true;
 
+        public Button buttonEndTurn;
         private int turnhero;
         private int turnEnemy;
-        private int choisenEnemy;
+        public int choisenEnemy;
       
         private void Awake()
         {
@@ -35,10 +37,6 @@ namespace Game
 
         private void Update()
         {
-            if(heroTurn)
-            {
-                
-            }
             if(heroTurn == false)
             {
                 switch(turnEnemy)
@@ -119,6 +117,82 @@ namespace Game
                 {
                     turnEnemy = 1;
                 }
+            }
+        }
+
+        public void Battle()
+        {
+            switch(turnhero)
+            {
+                case 1:
+                    switch(choisenEnemy)
+                    {
+                        case 1:
+                            if(monsterBand.monster1.TakeDamage(hero1.damage, hero1.typeOfDamage))
+                            {
+                                //монстр умирает   
+                            }
+                            break;
+                        case 2:
+                            if(monsterBand.monster2.TakeDamage(hero1.damage, hero1.typeOfDamage))
+                            {
+                                //монстр умирает
+                            }
+                            break;
+                        case 3:
+                            if(monsterBand.monster3.TakeDamage(hero1.damage, hero1.typeOfDamage))
+                            {
+                                //монстр умирает
+                            }
+                            break;
+                    }
+                    break;
+                case 2:
+                    switch(choisenEnemy)
+                    {
+                        case 1:
+                            if(monsterBand.monster1.TakeDamage(hero2.damage, hero2.typeOfDamage))
+                            {
+                                //монстр умирает
+                            }
+                            break;
+                        case 2:
+                            if(monsterBand.monster2.TakeDamage(hero2.damage, hero2.typeOfDamage))
+                            {
+                                //монстр умирает
+                            }
+                            break;
+                        case 3:
+                            if(monsterBand.monster3.TakeDamage(hero2.damage, hero2.typeOfDamage))
+                            {
+                                //монстр умирает
+                            }
+                            break;
+                    }
+                    break;
+                case 3:
+                    switch(choisenEnemy)
+                    {
+                        case 1:
+                            if(monsterBand.monster1.TakeDamage(hero3.damage, hero3.typeOfDamage))
+                            {
+                                //монстр умирает
+                            }
+                            break;
+                        case 2:
+                            if(monsterBand.monster2.TakeDamage(hero3.damage, hero3.typeOfDamage))
+                            {
+                                //монстр умирает
+                            }
+                            break;
+                        case 3:
+                            if(monsterBand.monster3.TakeDamage(hero3.damage, hero3.typeOfDamage))
+                            {
+                                //монстр умирает
+                            }
+                            break;
+                    }
+                    break;
             }
         }
 
