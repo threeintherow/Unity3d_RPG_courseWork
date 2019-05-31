@@ -10,6 +10,5 @@ public class Item : MonoBehaviour
     public int valueMagicResist;
     public int valuePhysicResist;
     public string pathSprite;
-    
-    
+    public string pathPrefub;
 }

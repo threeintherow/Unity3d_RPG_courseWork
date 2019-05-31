@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Aleksey\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Aleksey\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Unity3d_RPG_courseWork.469566606.00" t="ExcludeRecursive" />
-    <e p="F:\Unity3d_RPG_courseWork" t="IncludeRecursive">
+    <e p="C:\MyProgram\GitHub\Unity3d_RPG_courseWork" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -67,17 +65,18 @@
           <e p="Data" t="Include">
             <e p="Data.cs" t="Include" />
             <e p="DataInteraction.cs" t="Include" />
-            <e p="ListOfItems.cs" t="Include" />
           </e>
           <e p="Game" t="Include">
             <e p="GameInteraction.cs" t="Include" />
             <e p="ManagingScenes.cs" t="Include" />
             <e p="MonsterBand.cs" t="Include" />
+            <e p="MonsterInteraction.cs" t="Include" />
             <e p="PanelOpener.cs" t="Include" />
           </e>
           <e p="Inventory" t="Include">
             <e p="Drag.cs" t="Include" />
             <e p="HeroInventory.cs" t="Include" />
+            <e p="InventoryCreate.cs" t="Include" />
             <e p="Item.cs" t="Include" />
           </e>
           <e p="MainMenu" t="Include">
@@ -99,5 +98,7 @@
       </e>
       <e p="Unity3d_RPG_courseWork.sln" t="IncludeFlat" />
     </e>
+    <e p="C:\Users\Ilya\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Ilya\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Unity3d_RPG_courseWork.-5562592.00" t="ExcludeRecursive" />
   </component>
 </project>
