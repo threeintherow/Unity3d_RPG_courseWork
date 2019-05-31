@@ -42,11 +42,7 @@ namespace Game
             {
                 switch(turnEnemy)
                 {
-                    case 1:
-                        switch(Random.()
-                        {
-                            
-                        }
+                    case 1:                    
                         break;
                     case 2:
                         break;
