@@ -20,7 +20,7 @@ namespace Inventory
         public void RemoveSell()
         {
             item = null;
-            ownerOfItem = null;
+            ownerOfItem = "";
             image.sprite = null;
         }
         

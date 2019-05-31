@@ -1,4 +1,5 @@
-﻿using Data;
+﻿using System.Collections.Generic;
+using Data;
 using Game;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ namespace Characters
 {
     public class Hero : MonoBehaviour
     {
+        public List<Item> listItems;
         public GameInteraction gameInteraction;
         public Data.Data data;
         
@@ -33,6 +35,7 @@ namespace Characters
             this.physicalResist = 0;
             this.magicResist = 0;
             PrimaryCharacteristics(classOfHero);
+            listItems = new List<Item>();
         }
         public void SetCh(int classOfHero, int level = 1)
         {
@@ -41,6 +44,7 @@ namespace Characters
             this.physicalResist = 0;
             this.magicResist = 0;
             PrimaryCharacteristics(classOfHero);
+            listItems = new List<Item>();
         }
 
         public void SetCh(Hero hero)
@@ -57,6 +61,7 @@ namespace Characters
             this.typeOfDamage = hero.typeOfDamage;
             this.magicResist = hero.magicResist;
             this.physicalResist = hero.physicalResist;
+            listItems = new List<Item>();
         }
         public void IncreaseMind(int number)
         {
@@ -246,5 +251,6 @@ namespace Characters
             Hero hero = data.LoadData(key);
             this.SetCh(hero);
         }
+       
     }
 }

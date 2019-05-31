@@ -1,4 +1,6 @@
-﻿using Characters;
+﻿using System;
+using System.Collections.Generic;
+using Characters;
 using UnityEngine;
 
 namespace Data
@@ -12,7 +14,8 @@ namespace Data
         public static Hero hero1;
         public static Hero hero2;
         public static Hero hero3;
-    
+
+        public static List<Item> items;
 //    public static void FirstCharacterCreation()
 //    {
 //        hero1 = new DataClass.Hero(1);
