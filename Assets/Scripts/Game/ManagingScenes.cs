@@ -33,6 +33,8 @@ namespace Game
                 nextScene = Random.Range(2, SceneManager.sceneCountInBuildSettings);
             }
             DataInteraction.lastSaved = SceneManager.GetActiveScene().buildIndex;
+
+            StartCoroutine(MethodName());
             SetNextScene(nextScene);
             
             //альтернатива
@@ -42,6 +44,11 @@ namespace Game
         private void SetNextScene(int scene)
         {
             SceneManager.LoadScene(scene);
+        }
+
+        private IEnumerator MethodName()
+        {
+            yield return new WaitForSeconds(4);
         }
     }
 }

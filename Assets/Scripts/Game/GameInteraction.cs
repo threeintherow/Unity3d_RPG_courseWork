@@ -10,24 +10,20 @@ namespace Game
         private readonly System.Random _random = new System.Random();
 
         public GameObject gameObject;
+        public MonsterInteraction monsterInteraction;
         
         public Data.Data data;
         public Hero hero1;
         public Hero hero2;
         public Hero hero3;
 
-        public Enemy enemy1;
-        public Enemy enemy2;
-        public Enemy enemy3;
+        
     
         private void Awake()
         {
             hero1.classOfHero = 1;
             hero2.classOfHero = 2;
             hero3.classOfHero = 3;
-            enemy1.CreateEnemy();
-            enemy2.CreateEnemy();
-            enemy3.CreateEnemy();
         }
     
     
