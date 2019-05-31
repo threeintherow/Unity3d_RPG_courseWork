@@ -23,7 +23,7 @@ namespace Game
         public Button buttonEndTurn;
         private int turnhero;
         private int turnEnemy;
-        public int choisenEnemy;
+        public int chosenEnemy;
       
         private void Awake()
         {
@@ -125,7 +125,7 @@ namespace Game
             switch(turnhero)
             {
                 case 1:
-                    switch(choisenEnemy)
+                    switch(chosenEnemy)
                     {
                         case 1:
                             if(monsterBand.monster1.TakeDamage(hero1.damage, hero1.typeOfDamage))
@@ -148,7 +148,7 @@ namespace Game
                     }
                     break;
                 case 2:
-                    switch(choisenEnemy)
+                    switch(chosenEnemy)
                     {
                         case 1:
                             if(monsterBand.monster1.TakeDamage(hero2.damage, hero2.typeOfDamage))
@@ -171,7 +171,7 @@ namespace Game
                     }
                     break;
                 case 3:
-                    switch(choisenEnemy)
+                    switch(chosenEnemy)
                     {
                         case 1:
                             if(monsterBand.monster1.TakeDamage(hero3.damage, hero3.typeOfDamage))
