@@ -1400,13 +1400,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObject: {fileID: 290813856}
+  monsterInteraction: {fileID: 0}
   data: {fileID: 1742432527}
   hero1: {fileID: 38781864}
   hero2: {fileID: 1167055349}
   hero3: {fileID: 1049142219}
-  enemy1: {fileID: 0}
-  enemy2: {fileID: 0}
-  enemy3: {fileID: 0}
 --- !u!4 &476162997
 Transform:
   m_ObjectHideFlags: 0
@@ -26143,7 +26141,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 476162998}
         m_MethodName: InventoryActive
         m_Mode: 1
         m_Arguments:
