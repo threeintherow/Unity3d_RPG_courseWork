@@ -11,12 +11,14 @@ namespace Characters
         
         public int classOfHero;    // 1 - воин. 2 - вор. 3 - маг
         public int health;
+        public int healthMax;
         public int damage;
         public int level;
         public int typeOfDamage;    // 1 - магический. 2 - физический
         public int magicResist;
         public int physicalResist;
-        
+        public int experience;
+        public int experienceMax;
         public int mind;
         public int force;
         public int agility;
@@ -112,19 +114,28 @@ namespace Characters
             {
                 case 1:
                     Characteristics(40, 78, 60, 60, 50);
-                    this.health = 95 + level * 5;
+                    this.healthMax = 95 + level * 5;
+                    this.health = healthMax;
+                    this.experienceMax = 90;
+                    this.experience = 0;
                     this.damage = 12;
-                    this.typeOfDamage = 2;
+                    this.typeOfDamage = 2;               
                     break;
                 case 2:                
                     Characteristics(50, 60, 70, 65, 70);
-                    this.health = 95 + level * 5;
+                    this.healthMax = 95 + level * 5;
+                    this.health = healthMax;
+                    this.experienceMax = 90;
+                    this.experience = 0;
                     this.damage = 9;
                     this.typeOfDamage = 2;
                     break;
                 case 3:
                     Characteristics(78, 55, 60, 60, 40);
-                    this.health = 95 + level * 5;
+                    this.healthMax = 95 + level * 5;
+                    this.health = healthMax;
+                    this.experienceMax = 90;
+                    this.experience = 0;
                     this.damage = 10;
                     this.typeOfDamage = 1;
                     break;
@@ -133,7 +144,7 @@ namespace Characters
 
         private void IncreaseHealth()    //увеличение показателя хп при поднятии уровня
         {
-            this.health = 95 + level * 5;
+            this.healthMax = 95 + level * 5;
         }
 
         private void IncreaseDamage()    //увеличение показателя урона при поднятии уровня
@@ -163,6 +174,8 @@ namespace Characters
             this.level++;
             IncreaseHealth();
             IncreaseDamage();
+            this.experience = 0;
+            this.experienceMax = experienceMax + level * 5;
         }
 
         public void IncreaseMagicResist(int number)
