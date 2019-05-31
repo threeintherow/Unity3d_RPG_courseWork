@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-<<<<<<< HEAD
     <e p="C:\MyProgram\GitHub\Unity3d_RPG_courseWork" t="IncludeRecursive">
-=======
-    <e p="C:\Users\Aleksey\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Aleksey\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Unity3d_RPG_courseWork.469566606.00" t="ExcludeRecursive" />
-    <e p="F:\Unity3d_RPG_courseWork" t="IncludeRecursive">
->>>>>>> 3f09b18badcaea93f0b98190dfc63a51ce1e7ceb
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -71,6 +65,7 @@
           <e p="Data" t="Include">
             <e p="Data.cs" t="Include" />
             <e p="DataInteraction.cs" t="Include" />
+            <e p="SliderChange.cs" t="Include" />
           </e>
           <e p="Game" t="Include">
             <e p="GameInteraction.cs" t="Include" />

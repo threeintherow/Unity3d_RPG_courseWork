@@ -606,8 +606,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listItems: []
-  gameInteraction: {fileID: 0}
-  data: {fileID: 0}
+  gameInteraction: {fileID: 1209681333}
+  data: {fileID: 428904818}
   classOfHero: 0
   health: 0
   healthMax: 0
@@ -5770,8 +5770,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listItems: []
-  gameInteraction: {fileID: 0}
-  data: {fileID: 0}
+  gameInteraction: {fileID: 1209681333}
+  data: {fileID: 428904818}
   classOfHero: 0
   health: 0
   healthMax: 0
@@ -13137,8 +13137,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listItems: []
-  gameInteraction: {fileID: 0}
-  data: {fileID: 0}
+  gameInteraction: {fileID: 1209681333}
+  data: {fileID: 428904818}
   classOfHero: 0
   health: 0
   healthMax: 0

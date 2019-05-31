@@ -960,7 +960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listItems: []
-  gameInteraction: {fileID: 0}
+  gameInteraction: {fileID: 870135227}
   data: {fileID: 1527641980}
   classOfHero: 0
   health: 0
@@ -6059,7 +6059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listItems: []
-  gameInteraction: {fileID: 0}
+  gameInteraction: {fileID: 870135227}
   data: {fileID: 1527641980}
   classOfHero: 0
   health: 0
@@ -13780,7 +13780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listItems: []
-  gameInteraction: {fileID: 0}
+  gameInteraction: {fileID: 870135227}
   data: {fileID: 1527641980}
   classOfHero: 0
   health: 0

@@ -8,7 +8,7 @@ namespace Data
     public class DataInteraction : MonoBehaviour
     {
         private static bool _music = true;
-   
+        
         public static int lastSaved = 0;
 
         public static Hero hero1;
