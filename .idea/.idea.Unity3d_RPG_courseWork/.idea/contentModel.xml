@@ -71,6 +71,7 @@
             <e p="GameInteraction.cs" t="Include" />
             <e p="ManagingScenes.cs" t="Include" />
             <e p="MonsterBand.cs" t="Include" />
+            <e p="PanelOpener.cs" t="Include" />
           </e>
           <e p="Inventory" t="Include">
             <e p="Drag.cs" t="Include" />
