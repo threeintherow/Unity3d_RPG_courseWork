@@ -23,14 +23,10 @@ namespace Game
         public Button buttonEndTurn;
         private int turnhero;
         private int turnEnemy;
-<<<<<<< HEAD
-        public int chosenEnemy;
-=======
         public int chosenEnemy = 0;
         public int deadEnemy = 0;
         public int deadHero = 0;
->>>>>>> 5d745f90c8b76165200142c5fe29cddbbeee2a65
-      
+
         private void Awake()
         {
             turnhero = 1;
@@ -139,77 +135,6 @@ namespace Game
         {
             if(chosenEnemy == 0)
             {
-<<<<<<< HEAD
-                case 1:
-                    switch(chosenEnemy)
-                    {
-                        case 1:
-                            if(monsterBand.monster1.TakeDamage(hero1.damage, hero1.typeOfDamage))
-                            {
-                                //монстр умирает   
-                            }
-                            break;
-                        case 2:
-                            if(monsterBand.monster2.TakeDamage(hero1.damage, hero1.typeOfDamage))
-                            {
-                                //монстр умирает
-                            }
-                            break;
-                        case 3:
-                            if(monsterBand.monster3.TakeDamage(hero1.damage, hero1.typeOfDamage))
-                            {
-                                //монстр умирает
-                            }
-                            break;
-                    }
-                    break;
-                case 2:
-                    switch(chosenEnemy)
-                    {
-                        case 1:
-                            if(monsterBand.monster1.TakeDamage(hero2.damage, hero2.typeOfDamage))
-                            {
-                                //монстр умирает
-                            }
-                            break;
-                        case 2:
-                            if(monsterBand.monster2.TakeDamage(hero2.damage, hero2.typeOfDamage))
-                            {
-                                //монстр умирает
-                            }
-                            break;
-                        case 3:
-                            if(monsterBand.monster3.TakeDamage(hero2.damage, hero2.typeOfDamage))
-                            {
-                                //монстр умирает
-                            }
-                            break;
-                    }
-                    break;
-                case 3:
-                    switch(chosenEnemy)
-                    {
-                        case 1:
-                            if(monsterBand.monster1.TakeDamage(hero3.damage, hero3.typeOfDamage))
-                            {
-                                //монстр умирает
-                            }
-                            break;
-                        case 2:
-                            if(monsterBand.monster2.TakeDamage(hero3.damage, hero3.typeOfDamage))
-                            {
-                                //монстр умирает
-                            }
-                            break;
-                        case 3:
-                            if(monsterBand.monster3.TakeDamage(hero3.damage, hero3.typeOfDamage))
-                            {
-                                //монстр умирает
-                            }
-                            break;
-                    }
-                    break;
-=======
                 return;
             }
             else
@@ -312,7 +237,6 @@ namespace Game
                 {
                     SceneManager.LoadScene(Random.Range(2, SceneManager.sceneCountInBuildSettings));
                 }
->>>>>>> 5d745f90c8b76165200142c5fe29cddbbeee2a65
             }
         }
 
