@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-<<<<<<< HEAD
-    <e p="C:\Users\Максим\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Максим\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_Unity3d_RPG_courseWork.887077823.00" t="ExcludeRecursive" />
-    <e p="D:\Unity Projects\Unity3d_RPG_courseWork" t="IncludeRecursive">
-=======
     <e p="C:\MyProgram\GitHub\Unity3d_RPG_courseWork" t="IncludeRecursive">
->>>>>>> a95e5f1a76903b1e3b120c23a3bf8f32718a4d71
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -98,9 +92,12 @@
           </e>
         </e>
       </e>
+      <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
-      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
       <e p="Unity3d_RPG_courseWork.sln" t="IncludeFlat" />
     </e>
     <e p="C:\Users\Ilya\.Rider2018.3\system\extResources" t="IncludeRecursive" />
