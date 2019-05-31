@@ -25,8 +25,8 @@ namespace Characters
 
         public void CreateEnemy()
         {
-            health = 45 + DataInteraction.GetHero(rnd.Next(1, 4)).level * rnd.Next(5, 21);
-            maxHp = health;
+            maxHp = 45 + DataInteraction.GetHero(rnd.Next(1, 4)).level * rnd.Next(5, 21);
+            health = maxHp;
             damage = 15 + DataInteraction.GetHero(rnd.Next(1, 4)).level * rnd.Next(1, 7);
             typeOfDamage = rnd.Next(1, 3);
             switch (rnd.Next(1, 4))
