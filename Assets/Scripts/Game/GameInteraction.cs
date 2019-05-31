@@ -34,11 +34,7 @@ namespace Game
 
         private void Update()
         {
-            if(heroTurn)
-            {
-                
-            }
-            else
+            if(heroTurn == false)
             {
                 switch(turnEnemy)
                 {
