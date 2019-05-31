@@ -9,6 +9,8 @@ namespace Game
     {
         private readonly System.Random _random = new System.Random();
 
+        public GameObject gameObject;
+        
         public Data.Data data;
         public Hero hero1;
         public Hero hero2;
@@ -67,6 +69,15 @@ namespace Game
         public void Continue()
         {
             SceneManager.LoadScene(DataInteraction.lastSaved);
+        }
+
+
+        public void OpenInventory()
+        {
+            if(!gameObject.activeSelf)
+            {
+                gameObject.SetActive(true);
+            }
         }
 
     }
