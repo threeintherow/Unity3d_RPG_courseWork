@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.UNetWeaver;
 using UnityEngine;
 
 namespace Game
@@ -7,22 +8,26 @@ namespace Game
     public class MonsterSelect : MonoBehaviour
     {
         public GameObject an1, an2, an3;
+        public GameInteraction gameInteraction;
         public void OnMouseDown()
         {
-            if (gameObject.name.Equals("Slime_Green"))
+            if (gameObject.name.Equals("Slime_Green") || gameObject.name.Equals("Rabbit_Cyan"))
             {
                 if (an2.GetComponent<ParticleSystem>().isPlaying)
                 {
                     an2.GetComponent<ParticleSystem>().Stop();
+                    Log.Warning("an2 stop");
                 }
 
                 if (an3.GetComponent<ParticleSystem>().isPlaying)
                 {
                     an3.GetComponent<ParticleSystem>().Stop();
+                    Log.Warning("an3 stop");
                 }
                 an1.GetComponent<ParticleSystem>().Play();
+                Log.Warning("an1 play");
             }
-            else if (gameObject.name.Equals("Bat_Green"))
+            else if (gameObject.name.Equals("Bat_Green") || gameObject.name.Equals("Rabbit_Red"))
             {
                 if (an1.GetComponent<ParticleSystem>().isPlaying)
                 {
@@ -35,7 +40,7 @@ namespace Game
                 }
                 an2.GetComponent<ParticleSystem>().Play();
             }
-            else if (gameObject.name.Equals("Ghost_Violet"))
+            else if (gameObject.name.Equals("Ghost_Violet") || gameObject.name.Equals("Rabbit_Yellow"))
             {
                 if (an1.GetComponent<ParticleSystem>().isPlaying)
                 {

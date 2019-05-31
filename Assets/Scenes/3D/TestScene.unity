@@ -13221,6 +13221,22 @@ MonoBehaviour:
   spellResist: {fileID: 1988125993}
   health: {fileID: 322260630}
   healthSlider: {fileID: 1521645504}
+--- !u!114 &842667095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842667089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c668ed5bae1868048a64ac0e409f0317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  an1: {fileID: 1109128007}
+  an2: {fileID: 1432798695}
+  an3: {fileID: 1092228977}
+  gameInteraction: {fileID: 870135227}
 --- !u!1001 &847338346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13988,7 +14004,7 @@ GameObject:
   - component: {fileID: 1092228979}
   - component: {fileID: 1092228978}
   m_Layer: 0
-  m_Name: Select (2)
+  m_Name: Select3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14771,7 +14787,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 7.37
+      value: 4.19
       mode: 0
       spread: 0
       speed:
@@ -18810,7 +18826,7 @@ GameObject:
   - component: {fileID: 1109128009}
   - component: {fileID: 1109128008}
   m_Layer: 0
-  m_Name: Select
+  m_Name: Select1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22587,7 +22603,7 @@ ParticleSystem:
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
-    enabled: 0
+    enabled: 1
     collisionShape0: {fileID: 0}
     collisionShape1: {fileID: 0}
     collisionShape2: {fileID: 0}
@@ -23944,6 +23960,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020776208, y: 0.018638695, z: 0.01885953}
   m_Center: {x: -0.0003880946, y: 0.009035619, z: -0.00057025114}
+--- !u!114 &1235311614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235311608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c668ed5bae1868048a64ac0e409f0317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  an1: {fileID: 1109128007}
+  an2: {fileID: 1432798695}
+  an3: {fileID: 1092228977}
+  gameInteraction: {fileID: 870135227}
 --- !u!1001 &1256890760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29384,7 +29416,7 @@ GameObject:
   - component: {fileID: 1432798697}
   - component: {fileID: 1432798696}
   m_Layer: 0
-  m_Name: Select (1)
+  m_Name: Select2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30167,7 +30199,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 7.37
+      value: 3.78
       mode: 0
       spread: 0
       speed:
@@ -40004,6 +40036,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.061883, y: 0.059772037, z: 0.02}
   m_Center: {x: -0.0029999989, y: 0.03375136, z: 0}
+--- !u!114 &1698693058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698693051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c668ed5bae1868048a64ac0e409f0317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  an1: {fileID: 1109128007}
+  an2: {fileID: 1432798695}
+  an3: {fileID: 1092228977}
+  gameInteraction: {fileID: 870135227}
 --- !u!1 &1727046785
 GameObject:
   m_ObjectHideFlags: 0
