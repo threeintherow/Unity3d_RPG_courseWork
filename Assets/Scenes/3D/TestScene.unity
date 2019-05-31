@@ -13353,7 +13353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObject: {fileID: 730389812}
-  monsterInteraction: {fileID: 0}
+  monsterInteraction: {fileID: 566541481}
   data: {fileID: 1527641980}
   hero1: {fileID: 184168351}
   hero2: {fileID: 1073169042}
