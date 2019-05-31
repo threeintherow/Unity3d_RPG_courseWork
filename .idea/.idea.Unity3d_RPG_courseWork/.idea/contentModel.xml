@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Максим\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Максим\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_Unity3d_RPG_courseWork.887077823.00" t="ExcludeRecursive" />
-    <e p="D:\Unity Projects\Unity3d_RPG_courseWork" t="IncludeRecursive">
+    <e p="C:\MyProgram\GitHub\Unity3d_RPG_courseWork" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -73,6 +71,11 @@
             <e p="ManagingScenes.cs" t="Include" />
             <e p="MonsterBand.cs" t="Include" />
           </e>
+          <e p="Inventory" t="Include">
+            <e p="Drag.cs" t="Include" />
+            <e p="HeroInventory.cs" t="Include" />
+            <e p="Item.cs" t="Include" />
+          </e>
           <e p="MainMenu" t="Include">
             <e p="MenuScript.cs" t="Include" />
           </e>
@@ -84,10 +87,15 @@
           </e>
         </e>
       </e>
+      <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
-      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
       <e p="Unity3d_RPG_courseWork.sln" t="IncludeFlat" />
     </e>
+    <e p="C:\Users\Ilya\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Ilya\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Unity3d_RPG_courseWork.-5562592.00" t="ExcludeRecursive" />
   </component>
 </project>
