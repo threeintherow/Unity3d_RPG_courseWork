@@ -23,7 +23,9 @@ namespace Game
         public Button buttonEndTurn;
         private int turnhero;
         private int turnEnemy;
-        public int choisenEnemy;
+        public int chosenEnemy = 0;
+        public int deadEnemy = 0;
+        public int deadHero = 0;
       
         private void Awake()
         {
@@ -37,7 +39,7 @@ namespace Game
 
         private void Update()
         {
-            if(heroTurn == false)
+            if(heroTurn == false && deadHero < 4)
             {
                 switch(turnEnemy)
                 {
@@ -48,18 +50,21 @@ namespace Game
                                 if(hero1.TakeDamage(monsterBand.monster1.damage, monsterBand.monster1.typeOfDamage))
                                 {
                                     //герой умирает
+                                    deadHero++;
                                 }
                                 break;
                             case 2:
                                 if(hero2.TakeDamage(monsterBand.monster1.damage, monsterBand.monster1.typeOfDamage))
                                 {
                                     //герой умирает
+                                    deadHero++;
                                 }
                                 break;
                             case 3:
                                 if(hero3.TakeDamage(monsterBand.monster1.damage, monsterBand.monster1.typeOfDamage))
                                 {
                                     //герой умирает
+                                    deadHero++;
                                 }
                                 break;
                         }
@@ -71,18 +76,21 @@ namespace Game
                                 if(hero1.TakeDamage(monsterBand.monster2.damage, monsterBand.monster2.typeOfDamage))
                                 {
                                     //герой умирает
+                                    deadHero++;
                                 }
                                 break;
                             case 2:
                                 if(hero2.TakeDamage(monsterBand.monster2.damage, monsterBand.monster2.typeOfDamage))
                                 {
                                     //герой умирает
+                                    deadHero++;
                                 }
                                 break;
                             case 3:
                                 if(hero3.TakeDamage(monsterBand.monster2.damage, monsterBand.monster2.typeOfDamage))
                                 {
                                     //герой умирает
+                                    deadHero++;
                                 }
                                 break;
                         }
@@ -94,18 +102,21 @@ namespace Game
                                 if(hero1.TakeDamage(monsterBand.monster3.damage, monsterBand.monster3.typeOfDamage))
                                 {
                                     //герой умирает
+                                    deadHero++;
                                 }
                                 break;
                             case 2:
                                 if(hero2.TakeDamage(monsterBand.monster3.damage, monsterBand.monster3.typeOfDamage))
                                 {
                                     //герой умирает
+                                    deadHero++;
                                 }
                                 break;
                             case 3:
                                 if(hero3.TakeDamage(monsterBand.monster3.damage, monsterBand.monster3.typeOfDamage))
                                 {
                                     //герой умирает
+                                    deadHero++;
                                 }
                                 break;
                         }
@@ -122,77 +133,110 @@ namespace Game
 
         public void Battle()
         {
-            switch(turnhero)
+            if(chosenEnemy == 0)
             {
-                case 1:
-                    switch(choisenEnemy)
-                    {
-                        case 1:
-                            if(monsterBand.monster1.TakeDamage(hero1.damage, hero1.typeOfDamage))
-                            {
-                                //монстр умирает   
-                            }
-                            break;
-                        case 2:
-                            if(monsterBand.monster2.TakeDamage(hero1.damage, hero1.typeOfDamage))
-                            {
-                                //монстр умирает
-                            }
-                            break;
-                        case 3:
-                            if(monsterBand.monster3.TakeDamage(hero1.damage, hero1.typeOfDamage))
-                            {
-                                //монстр умирает
-                            }
-                            break;
-                    }
-                    break;
-                case 2:
-                    switch(choisenEnemy)
-                    {
-                        case 1:
-                            if(monsterBand.monster1.TakeDamage(hero2.damage, hero2.typeOfDamage))
-                            {
-                                //монстр умирает
-                            }
-                            break;
-                        case 2:
-                            if(monsterBand.monster2.TakeDamage(hero2.damage, hero2.typeOfDamage))
-                            {
-                                //монстр умирает
-                            }
-                            break;
-                        case 3:
-                            if(monsterBand.monster3.TakeDamage(hero2.damage, hero2.typeOfDamage))
-                            {
-                                //монстр умирает
-                            }
-                            break;
-                    }
-                    break;
-                case 3:
-                    switch(choisenEnemy)
-                    {
-                        case 1:
-                            if(monsterBand.monster1.TakeDamage(hero3.damage, hero3.typeOfDamage))
-                            {
-                                //монстр умирает
-                            }
-                            break;
-                        case 2:
-                            if(monsterBand.monster2.TakeDamage(hero3.damage, hero3.typeOfDamage))
-                            {
-                                //монстр умирает
-                            }
-                            break;
-                        case 3:
-                            if(monsterBand.monster3.TakeDamage(hero3.damage, hero3.typeOfDamage))
-                            {
-                                //монстр умирает
-                            }
-                            break;
-                    }
-                    break;
+                return;
+            }
+            else
+            {
+                switch(turnhero)
+                {
+                    case 1:
+                        switch(chosenEnemy)
+                        {
+                            case 1:
+                                if(monsterBand.monster1.TakeDamage(hero1.damage, hero1.typeOfDamage))
+                                {
+                                    //монстр умирает  
+                                    deadEnemy++;
+                                }
+
+                                break;
+                            case 2:
+                                if(monsterBand.monster2.TakeDamage(hero1.damage, hero1.typeOfDamage))
+                                {
+                                    //монстр умирает
+                                    deadEnemy++;
+                                }
+
+                                break;
+                            case 3:
+                                if(monsterBand.monster3.TakeDamage(hero1.damage, hero1.typeOfDamage))
+                                {
+                                    //монстр умирает
+                                    deadEnemy++;
+                                }
+
+                                break;
+                        }
+
+                        break;
+                    case 2:
+                        switch(chosenEnemy)
+                        {
+                            case 1:
+                                if(monsterBand.monster1.TakeDamage(hero2.damage, hero2.typeOfDamage))
+                                {
+                                    //монстр умирает
+                                    deadEnemy++;
+                                }
+
+                                break;
+                            case 2:
+                                if(monsterBand.monster2.TakeDamage(hero2.damage, hero2.typeOfDamage))
+                                {
+                                    //монстр умирает
+                                    deadEnemy++;
+                                }
+
+                                break;
+                            case 3:
+                                if(monsterBand.monster3.TakeDamage(hero2.damage, hero2.typeOfDamage))
+                                {
+                                    //монстр умирает
+                                    deadEnemy++;
+                                }
+
+                                break;
+                        }
+
+                        break;
+                    case 3:
+                        switch(chosenEnemy)
+                        {
+                            case 1:
+                                if(monsterBand.monster1.TakeDamage(hero3.damage, hero3.typeOfDamage))
+                                {
+                                    //монстр умирает
+                                    deadEnemy++;
+                                }
+
+                                break;
+                            case 2:
+                                if(monsterBand.monster2.TakeDamage(hero3.damage, hero3.typeOfDamage))
+                                {
+                                    //монстр умирает
+                                    deadEnemy++;
+                                }
+
+                                break;
+                            case 3:
+                                if(monsterBand.monster3.TakeDamage(hero3.damage, hero3.typeOfDamage))
+                                {
+                                    //монстр умирает
+                                    deadEnemy++;
+                                }
+
+                                break;
+                        }
+
+                        break;
+                }
+
+                if(deadEnemy > 3)
+                {
+                    SceneManager.LoadScene(Random.Range(2, SceneManager.sceneCountInBuildSettings));
+                }
             }
         }
 
