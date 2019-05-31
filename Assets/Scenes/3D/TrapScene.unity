@@ -15196,7 +15196,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 469125382}
         m_MethodName: InventoryActive
         m_Mode: 1
         m_Arguments:
@@ -25330,19 +25330,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameInteraction: {fileID: 469125383}
-  hero1: {fileID: 0}
-  hero2: {fileID: 0}
-  hero3: {fileID: 0}
+  hero1: {fileID: 1877902609}
+  hero2: {fileID: 1957017893}
+  hero3: {fileID: 631641013}
   currentHero: {fileID: 0}
-  helmet: {fileID: 0}
-  armor: {fileID: 0}
-  belt: {fileID: 0}
-  sword2: {fileID: 0}
-  sword1: {fileID: 0}
-  ring1: {fileID: 0}
-  ring2: {fileID: 0}
-  ring3: {fileID: 0}
-  shoes: {fileID: 0}
+  helmet: {fileID: 309951371}
+  armor: {fileID: 1732760479}
+  belt: {fileID: 424608793}
+  sword2: {fileID: 1483414070}
+  sword1: {fileID: 1912021562}
+  ring1: {fileID: 2122885654}
+  ring2: {fileID: 1220330825}
+  ring3: {fileID: 405267884}
+  shoes: {fileID: 621590132}
   onHero: []
   panel: {fileID: 789306798}
   drags: []
@@ -25363,10 +25363,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObject: {fileID: 789306798}
   monsterInteraction: {fileID: 0}
-  data: {fileID: 0}
-  hero1: {fileID: 0}
-  hero2: {fileID: 0}
-  hero3: {fileID: 0}
+  data: {fileID: 140543650}
+  hero1: {fileID: 1877902609}
+  hero2: {fileID: 1957017893}
+  hero3: {fileID: 631641013}
 --- !u!4 &469125384
 Transform:
   m_ObjectHideFlags: 0
@@ -31057,7 +31057,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 469125382}
-        m_MethodName: SetHero1
+        m_MethodName: SetHero2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -31842,7 +31842,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 469125383}
+      - m_Target: {fileID: 2043910163}
         m_MethodName: SetScene
         m_Mode: 3
         m_Arguments:
@@ -31975,7 +31975,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 469125382}
-        m_MethodName: SetHero2
+        m_MethodName: SetHero1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -42952,7 +42952,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 469125383}
+      - m_Target: {fileID: 2043910163}
         m_MethodName: ShowStatistics
         m_Mode: 1
         m_Arguments:
@@ -53581,7 +53581,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1056928028}
   m_HandleRect: {fileID: 1056928027}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -63751,7 +63751,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 469125383}
+      - m_Target: {fileID: 2043910163}
         m_MethodName: SetNextLevel
         m_Mode: 1
         m_Arguments:
