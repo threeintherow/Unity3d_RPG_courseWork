@@ -16,16 +16,14 @@ namespace Game
                 if (an2.GetComponent<ParticleSystem>().isPlaying)
                 {
                     an2.GetComponent<ParticleSystem>().Stop();
-                    Log.Warning("an2 stop");
                 }
 
                 if (an3.GetComponent<ParticleSystem>().isPlaying)
                 {
                     an3.GetComponent<ParticleSystem>().Stop();
-                    Log.Warning("an3 stop");
                 }
                 an1.GetComponent<ParticleSystem>().Play();
-                Log.Warning("an1 play");
+                gameInteraction.chosenEnemy = 1;
             }
             else if (gameObject.name.Equals("Bat_Green") || gameObject.name.Equals("Rabbit_Red"))
             {
@@ -39,6 +37,7 @@ namespace Game
                     an3.GetComponent<ParticleSystem>().Stop();
                 }
                 an2.GetComponent<ParticleSystem>().Play();
+                gameInteraction.chosenEnemy = 2;
             }
             else if (gameObject.name.Equals("Ghost_Violet") || gameObject.name.Equals("Rabbit_Yellow"))
             {
@@ -52,6 +51,7 @@ namespace Game
                     an2.GetComponent<ParticleSystem>().Stop();
                 }
                 an3.GetComponent<ParticleSystem>().Play();
+                gameInteraction.chosenEnemy = 3;
             }
         }
     }

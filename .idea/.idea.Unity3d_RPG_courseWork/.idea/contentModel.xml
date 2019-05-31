@@ -44,6 +44,7 @@
             <e p="readme_jp_ver1.3.txt" t="Include" />
           </e>
         </e>
+        <e p="MonsterDieth.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="GitHub" t="Include">
             <e p="Editor" t="Include">

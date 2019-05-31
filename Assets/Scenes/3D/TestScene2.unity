@@ -17137,6 +17137,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.021844786, z: 0.02}
   m_Center: {x: 0, y: 0.011105087, z: 0}
+--- !u!114 &691196426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691196421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c668ed5bae1868048a64ac0e409f0317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  an1: {fileID: 2070594157}
+  an2: {fileID: 381636338}
+  an3: {fileID: 882599317}
+  gameInteraction: {fileID: 1209681333}
 --- !u!1 &721389455 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 5246e1e4bc0300f47b95f05f5bb366d0,
@@ -23328,6 +23344,7 @@ MonoBehaviour:
   hero2: {fileID: 1073169042}
   hero3: {fileID: 285873403}
   heroTurn: 1
+  chosenEnemy: 0
 --- !u!4 &1209681334
 Transform:
   m_ObjectHideFlags: 0
@@ -34969,6 +34986,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.021941645, z: 0.02}
   m_Center: {x: 0, y: 0.010944932, z: 0}
+--- !u!114 &1664887283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664887278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c668ed5bae1868048a64ac0e409f0317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  an1: {fileID: 2070594157}
+  an2: {fileID: 381636338}
+  an3: {fileID: 882599317}
+  gameInteraction: {fileID: 1209681333}
 --- !u!1001 &1673117087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40880,6 +40913,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.02154433, z: 0.02}
   m_Center: {x: 0, y: 0.011069589, z: 0}
+--- !u!114 &2072348271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072348266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c668ed5bae1868048a64ac0e409f0317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  an1: {fileID: 2070594157}
+  an2: {fileID: 381636338}
+  an3: {fileID: 882599317}
+  gameInteraction: {fileID: 1209681333}
 --- !u!114 &2082289662 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6909238549971563283, guid: 5af7486b4f846234387fe1aa89d7abdf,
