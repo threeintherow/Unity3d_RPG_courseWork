@@ -43,15 +43,80 @@ namespace Game
                 switch(turnEnemy)
                 {
                     case 1:
-                        switch(Random.()
+                        switch(Random.Range(1, 3))
                         {
-                            
+                            case 1:
+                                if(hero1.TakeDamage(monsterBand.monster1.damage, monsterBand.monster1.typeOfDamage))
+                                {
+                                    //герой умирает
+                                }
+                                break;
+                            case 2:
+                                if(hero2.TakeDamage(monsterBand.monster1.damage, monsterBand.monster1.typeOfDamage))
+                                {
+                                    //герой умирает
+                                }
+                                break;
+                            case 3:
+                                if(hero3.TakeDamage(monsterBand.monster1.damage, monsterBand.monster1.typeOfDamage))
+                                {
+                                    //герой умирает
+                                }
+                                break;
                         }
                         break;
                     case 2:
+                        switch(Random.Range(1, 3))
+                        {
+                            case 1:
+                                if(hero1.TakeDamage(monsterBand.monster2.damage, monsterBand.monster2.typeOfDamage))
+                                {
+                                    //герой умирает
+                                }
+                                break;
+                            case 2:
+                                if(hero2.TakeDamage(monsterBand.monster2.damage, monsterBand.monster2.typeOfDamage))
+                                {
+                                    //герой умирает
+                                }
+                                break;
+                            case 3:
+                                if(hero3.TakeDamage(monsterBand.monster2.damage, monsterBand.monster2.typeOfDamage))
+                                {
+                                    //герой умирает
+                                }
+                                break;
+                        }
                         break;
                     case 3:
+                        switch(Random.Range(1, 3))
+                        {
+                            case 1:
+                                if(hero1.TakeDamage(monsterBand.monster3.damage, monsterBand.monster3.typeOfDamage))
+                                {
+                                    //герой умирает
+                                }
+                                break;
+                            case 2:
+                                if(hero2.TakeDamage(monsterBand.monster3.damage, monsterBand.monster3.typeOfDamage))
+                                {
+                                    //герой умирает
+                                }
+                                break;
+                            case 3:
+                                if(hero3.TakeDamage(monsterBand.monster3.damage, monsterBand.monster3.typeOfDamage))
+                                {
+                                    //герой умирает
+                                }
+                                break;
+                        }
                         break;
+                }
+                heroTurn = true;
+                turnEnemy++;
+                if(turnEnemy > 3)
+                {
+                    turnEnemy = 1;
                 }
             }
         }

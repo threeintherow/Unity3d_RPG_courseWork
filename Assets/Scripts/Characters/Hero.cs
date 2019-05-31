@@ -188,6 +188,7 @@ namespace Characters
             this.magicResist += number;
         }
 
+        
         public void IncreasePhysicalResist(int number)
         {
             this.physicalResist += number;
