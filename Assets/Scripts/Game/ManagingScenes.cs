@@ -1,4 +1,5 @@
-﻿using Data;
+﻿using System.Collections;
+using Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,10 +7,10 @@ namespace Game
 {
     public class ManagingScenes : MonoBehaviour
     {
-        public void SetScene(int level)
+        public void SetScene(int scene)
         {
             DataInteraction.lastSaved = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(level);
+            SetNextScene(scene);
         }
 
         public void SetPreviousScene()
@@ -32,10 +33,15 @@ namespace Game
                 nextScene = Random.Range(2, SceneManager.sceneCountInBuildSettings);
             }
             DataInteraction.lastSaved = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(nextScene);
-        
+            SetNextScene(nextScene);
+            
             //альтернатива
             //SceneManager.LoadScene(Random.Range(2, SceneManager.sceneCount);
+        }
+
+        private void SetNextScene(int scene)
+        {
+            SceneManager.LoadScene(scene);
         }
     }
 }

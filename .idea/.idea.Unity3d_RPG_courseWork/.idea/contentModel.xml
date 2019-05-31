@@ -65,7 +65,6 @@
           <e p="Data" t="Include">
             <e p="Data.cs" t="Include" />
             <e p="DataInteraction.cs" t="Include" />
-            <e p="ListOfItems.cs" t="Include" />
           </e>
           <e p="Game" t="Include">
             <e p="GameInteraction.cs" t="Include" />
@@ -76,6 +75,7 @@
           <e p="Inventory" t="Include">
             <e p="Drag.cs" t="Include" />
             <e p="HeroInventory.cs" t="Include" />
+            <e p="InventoryCreate.cs" t="Include" />
             <e p="Item.cs" t="Include" />
           </e>
           <e p="MainMenu" t="Include">
