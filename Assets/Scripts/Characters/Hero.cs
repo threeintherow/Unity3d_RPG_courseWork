@@ -179,7 +179,6 @@ namespace Characters
             this.level++;
             IncreaseHealth();
             IncreaseDamage();
-            this.experience = 0;
             this.experienceMax = experienceMax + level * 5;
         }
 

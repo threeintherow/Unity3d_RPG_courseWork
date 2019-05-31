@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Data;
 using Game;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,6 +8,7 @@ using UnityEngine.UI;
 public class PanelOpener : MonoBehaviour
 {
     public GameObject monsterPanel;
+    public GameObject winPanel;
     public GameInteraction gameInteraction;
     public MonsterBand monsterBand;
 
@@ -14,6 +16,7 @@ public class PanelOpener : MonoBehaviour
     public Text physicalResist;
     public Text spellResist;
     public Text health;
+    public Text expGained;
 
     public Slider healthSlider;
     public void OnMouseDown()
