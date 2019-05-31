@@ -26,6 +26,10 @@ namespace Data
         {
             hero1 = gameObject.AddComponent<Hero>();
             hero1.SetCh(1);
+<<<<<<< HEAD
+=======
+            hero1.listItems.Add(gameObject.AddComponent<Item>());
+>>>>>>> d8d6db4dc92029e4eb45fe0eba67878944d50f4d
             hero2 = gameObject.AddComponent<Hero>();
             hero2.SetCh(2);
             hero3 = gameObject.AddComponent<Hero>();

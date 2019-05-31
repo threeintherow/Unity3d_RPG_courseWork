@@ -25,6 +25,9 @@ namespace Game
             hero1.classOfHero = 1;
             hero2.classOfHero = 2;
             hero3.classOfHero = 3;
+            enemy1.CreateEnemy();
+            enemy2.CreateEnemy();
+            enemy3.CreateEnemy();
         }
     
     
