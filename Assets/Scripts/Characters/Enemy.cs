@@ -44,6 +44,11 @@ namespace Characters
             }
         }
 
+        public bool isDied()
+        {
+            return health < 1;
+        }
+
         public bool TakeDamage(int damage, int typeOfDamage)    //возвращает true если монстр погиб
         {
             switch(typeOfDamage)
@@ -54,6 +59,8 @@ namespace Characters
                         health -= (damage - magicResist);
                         if(health < 1)
                         {
+                            if(health < 0)
+                                health = 0;
                             return true;
                         }
                     }
@@ -68,6 +75,8 @@ namespace Characters
                         health -= (damage - physicalResist);
                         if(health < 1)
                         {
+                            if(health < 0)
+                                health = 0;
                             return true;
                         }
                     }
