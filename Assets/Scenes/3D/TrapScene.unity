@@ -26044,7 +26044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listItems: []
-  gameInteraction: {fileID: 0}
+  gameInteraction: {fileID: 469125383}
   data: {fileID: 140543650}
   classOfHero: 0
   health: 0
@@ -32477,7 +32477,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -320.8, y: 140.70001}
+  m_AnchoredPosition: {x: -320.80005, y: 140.70001}
   m_SizeDelta: {x: -1671.7, y: -726.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1093178504
@@ -58551,7 +58551,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 5
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -68559,7 +68559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listItems: []
-  gameInteraction: {fileID: 0}
+  gameInteraction: {fileID: 469125383}
   data: {fileID: 140543650}
   classOfHero: 0
   health: 0
@@ -68833,7 +68833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listItems: []
-  gameInteraction: {fileID: 0}
+  gameInteraction: {fileID: 469125383}
   data: {fileID: 140543650}
   classOfHero: 0
   health: 0

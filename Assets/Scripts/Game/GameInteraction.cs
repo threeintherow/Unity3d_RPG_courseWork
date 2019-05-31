@@ -10,24 +10,52 @@ namespace Game
         private readonly System.Random _random = new System.Random();
 
         public GameObject gameObject;
-        public MonsterInteraction monsterInteraction;
+        public MonsterBand monsterBand;
         
         public Data.Data data;
         public Hero hero1;
         public Hero hero2;
         public Hero hero3;
 
-        
-    
+        public bool heroTurn = true;
+
+        private int turnhero;
+        private int turnEnemy;
+      
         private void Awake()
         {
+            turnhero = 1;
+            turnEnemy = 1;
             hero1.classOfHero = 1;
             hero2.classOfHero = 2;
             hero3.classOfHero = 3;
         }
-    
-    
-    
+
+
+        private void Update()
+        {
+            if(heroTurn)
+            {
+                
+            }
+            else
+            {
+                switch(turnEnemy)
+                {
+                    case 1:
+                        switch(Random.()
+                        {
+                            
+                        }
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                }
+            }
+        }
+
         public void SaveData()
         {
             string key1 = "Hero1";
