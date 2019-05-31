@@ -65,6 +65,7 @@
           <e p="Data" t="Include">
             <e p="Data.cs" t="Include" />
             <e p="DataInteraction.cs" t="Include" />
+            <e p="ListOfItems.cs" t="Include" />
           </e>
           <e p="Game" t="Include">
             <e p="GameInteraction.cs" t="Include" />

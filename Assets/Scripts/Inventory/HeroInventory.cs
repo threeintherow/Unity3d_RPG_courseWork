@@ -58,8 +58,9 @@ namespace Inventory
         {
             foreach(var drag in drags)
             {
-                drag.RemoveSell();
+                Destroy(drag.gameObject);
             }
+            drags.Clear();
             panel.SetActive(false);
             
         }
@@ -67,9 +68,17 @@ namespace Inventory
         public void InventoryEnable()
         {
             panel.SetActive(true);
-            foreach(var t in drags)
+            foreach(var drag in drags)
             {
-                t.RemoveSell();
+                Destroy(drag.gameObject);
+            }
+            drags.Clear();
+
+            for(int i = 0; i < items.Count; i++)
+            {
+                GameObject newCell = Instantiate(cell);
+                newCell.transform.SetParent(cellParent, false);
+                drags.Add(newCell.GetComponent<Drag>());
             }
 
             items = currentHero.listItems;
@@ -78,7 +87,16 @@ namespace Inventory
                 drags[i].item = items[i];
                 drags[i].image.sprite = Resources.Load<Sprite>(items[i].pathSprite);
                 drags[i].ownerOfItem = currentHero.GetKey();
+                drags[i].heroInventory = this;
+            }
 
+            for(int i = drags.Count - 1; i > 0; i--)
+            {
+                if(drags[i].ownerOfItem == "")
+                {
+                    Destroy(drags[i].gameObject);
+                    drags.RemoveAt(i);
+                }
             }
         }
 

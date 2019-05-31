@@ -17,12 +17,5 @@ namespace Inventory
             heroInventory.UseItem(this);
         }
 
-        public void RemoveSell()
-        {
-            item = null;
-            ownerOfItem = "";
-            image.sprite = null;
-        }
-        
     }
 }
