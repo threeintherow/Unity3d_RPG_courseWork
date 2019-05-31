@@ -21,6 +21,7 @@ namespace Game
 
         private int turnhero;
         private int turnEnemy;
+        private int choisenEnemy;
       
         private void Awake()
         {
@@ -34,11 +35,14 @@ namespace Game
 
         private void Update()
         {
+            if(heroTurn)
+            {
+                
+            }
             if(heroTurn == false)
             {
                 switch(turnEnemy)
                 {
-<<<<<<< HEAD
                     case 1:
                         switch(Random.Range(1, 3))
                         {
@@ -61,9 +65,6 @@ namespace Game
                                 }
                                 break;
                         }
-=======
-                    case 1:                    
->>>>>>> 64fc5d9813e96dac7c92ebb64d7f0538b5db176d
                         break;
                     case 2:
                         switch(Random.Range(1, 3))

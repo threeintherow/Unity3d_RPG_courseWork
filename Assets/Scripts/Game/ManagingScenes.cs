@@ -34,7 +34,6 @@ namespace Game
             }
             DataInteraction.lastSaved = SceneManager.GetActiveScene().buildIndex;
 
-            StartCoroutine(MethodName());
             SetNextScene(nextScene);
             
             //альтернатива
