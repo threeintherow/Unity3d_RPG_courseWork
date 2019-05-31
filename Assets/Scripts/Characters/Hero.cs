@@ -251,6 +251,5 @@ namespace Characters
             Hero hero = data.LoadData(key);
             this.SetCh(hero);
         }
-       
     }
 }
