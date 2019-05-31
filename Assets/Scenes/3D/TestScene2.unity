@@ -494,6 +494,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152653998}
   m_CullTransparentMesh: 0
+--- !u!114 &162916201 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6909238549059087240, guid: 5af7486b4f846234387fe1aa89d7abdf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1182903433}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &184168349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12351,14 +12363,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6d580ba768aae4f8026c796ce38c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterPanel: {fileID: 0}
-  gameInteraction: {fileID: 0}
-  monsterInteraction: {fileID: 0}
-  damage: {fileID: 0}
-  physicalResist: {fileID: 0}
-  spellResist: {fileID: 0}
-  health: {fileID: 0}
-  healthSlider: {fileID: 0}
+  monsterPanel: {fileID: 1182903435}
+  gameInteraction: {fileID: 1209681333}
+  monsterBand: {fileID: 804007285}
+  damage: {fileID: 2082289662}
+  physicalResist: {fileID: 1701821204}
+  spellResist: {fileID: 791761364}
+  health: {fileID: 1930608783}
+  healthSlider: {fileID: 162916201}
 --- !u!65 &691196425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12452,6 +12464,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1673117087}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &791761364 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6909238549550010670, guid: 5af7486b4f846234387fe1aa89d7abdf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1182903433}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &804007284
 GameObject:
   m_ObjectHideFlags: 0
@@ -12481,6 +12505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e10813a46b12964e881192bfc398187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameInteraction: {fileID: 1209681333}
   monster1: {fileID: 691196423}
   monster2: {fileID: 1664887280}
   monster3: {fileID: 2072348268}
@@ -13791,11 +13816,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObject: {fileID: 1833172129}
-  monsterInteraction: {fileID: 0}
+  monsterBand: {fileID: 804007285}
   data: {fileID: 428904818}
   hero1: {fileID: 184168351}
   hero2: {fileID: 1073169042}
   hero3: {fileID: 285873403}
+  heroTurn: 1
 --- !u!4 &1209681334
 Transform:
   m_ObjectHideFlags: 0
@@ -25418,12 +25444,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterPanel: {fileID: 1182903435}
   gameInteraction: {fileID: 1209681333}
-  monsterInteraction: {fileID: 0}
-  damage: {fileID: 0}
-  physicalResist: {fileID: 0}
-  spellResist: {fileID: 0}
-  health: {fileID: 0}
-  healthSlider: {fileID: 0}
+  monsterBand: {fileID: 804007285}
+  damage: {fileID: 2082289662}
+  physicalResist: {fileID: 1701821204}
+  spellResist: {fileID: 791761364}
+  health: {fileID: 1930608783}
+  healthSlider: {fileID: 162916201}
 --- !u!65 &1664887282
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25498,6 +25524,18 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 112495ee01e1b834a89c654405f9be48, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31ebd80d3f64ab74b98898947c055382, type: 3}
+--- !u!114 &1701821204 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6909238550130305168, guid: 5af7486b4f846234387fe1aa89d7abdf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1182903433}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1720285744
 GameObject:
   m_ObjectHideFlags: 0
@@ -26370,6 +26408,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1777869643}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1930608783 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6909238550700257414, guid: 5af7486b4f846234387fe1aa89d7abdf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1182903433}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2067449023
 GameObject:
   m_ObjectHideFlags: 0
@@ -26550,14 +26600,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6d580ba768aae4f8026c796ce38c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterPanel: {fileID: 0}
-  gameInteraction: {fileID: 0}
-  monsterInteraction: {fileID: 0}
-  damage: {fileID: 0}
-  physicalResist: {fileID: 0}
-  spellResist: {fileID: 0}
-  health: {fileID: 0}
-  healthSlider: {fileID: 0}
+  monsterPanel: {fileID: 1182903435}
+  gameInteraction: {fileID: 1209681333}
+  monsterBand: {fileID: 804007285}
+  damage: {fileID: 2082289662}
+  physicalResist: {fileID: 1701821204}
+  spellResist: {fileID: 791761364}
+  health: {fileID: 1930608783}
+  healthSlider: {fileID: 162916201}
 --- !u!65 &2072348270
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26571,6 +26621,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.02154433, z: 0.02}
   m_Center: {x: 0, y: 0.011069589, z: 0}
+--- !u!114 &2082289662 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6909238549971563283, guid: 5af7486b4f846234387fe1aa89d7abdf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1182903433}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2103688646
 GameObject:
   m_ObjectHideFlags: 0

@@ -38,6 +38,7 @@ namespace Game
             {
                 switch(turnEnemy)
                 {
+<<<<<<< HEAD
                     case 1:
                         switch(Random.Range(1, 3))
                         {
@@ -60,6 +61,9 @@ namespace Game
                                 }
                                 break;
                         }
+=======
+                    case 1:                    
+>>>>>>> 64fc5d9813e96dac7c92ebb64d7f0538b5db176d
                         break;
                     case 2:
                         switch(Random.Range(1, 3))
