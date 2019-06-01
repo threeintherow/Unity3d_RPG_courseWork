@@ -273,6 +273,17 @@ namespace Game
                 if(deadEnemy > 3)
                 {
                     SceneManager.LoadScene(Random.Range(2, SceneManager.sceneCountInBuildSettings));
+                    int expForWin = (monsterBand.monster1.health + monsterBand.monster2.health + monsterBand.monster3.health) / 10;
+
+                    for (int i = 0; i < 3; i++)
+                    {
+                        DataInteraction.GetHero(i).experience += expForWin;
+                        if (DataInteraction.GetHero(i).experience >= DataInteraction.GetHero(i).experienceMax)
+                        {
+                            DataInteraction.GetHero(i).experience = DataInteraction.GetHero(i).experienceMax - DataInteraction.GetHero(1).experience;
+                            DataInteraction.GetHero(i).IncreaseLevel();
+                        }
+                    }
                 }
             }
         }

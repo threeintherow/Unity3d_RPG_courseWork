@@ -97,6 +97,17 @@ public class PanelOpener : MonoBehaviour
                 physicalResist.text = monsterBand.monster3.physicalResist.ToString();
                 spellResist.text = monsterBand.monster3.magicResist.ToString();  
             }                
-        }    
+        }                 
+    }
+    
+    public void Win(int expForWin)
+    {
+        if (gameInteraction.deadEnemy > 3)
+        {
+            winPanel.SetActive(true);
+            expGained.text = expForWin.ToString();    
+        }
+        
     }
 }
+
