@@ -26,11 +26,7 @@ namespace Game
         public int chosenEnemy = 0;
         public int deadEnemy = 0;
         public int deadHero = 0;
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> bbb0be64ec0b0e653fd8a628d05a6e4457a9fba6
         private void Awake()
         {
             turnhero = 1;
@@ -277,6 +273,17 @@ namespace Game
                 if(deadEnemy > 3)
                 {
                     SceneManager.LoadScene(Random.Range(2, SceneManager.sceneCountInBuildSettings));
+                    int expForWin = (monsterBand.monster1.health + monsterBand.monster2.health + monsterBand.monster3.health) / 10;
+
+                    for (int i = 0; i < 3; i++)
+                    {
+                        DataInteraction.GetHero(i).experience += expForWin;
+                        if (DataInteraction.GetHero(i).experience >= DataInteraction.GetHero(i).experienceMax)
+                        {
+                            DataInteraction.GetHero(i).experience = DataInteraction.GetHero(i).experienceMax - DataInteraction.GetHero(1).experience;
+                            DataInteraction.GetHero(i).IncreaseLevel();
+                        }
+                    }
                 }
             }
         }
