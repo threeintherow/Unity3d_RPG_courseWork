@@ -22,6 +22,7 @@ namespace Game
         public PanelOpener panelOpener;
         public GameObject gameObject;
         public MonsterBand monsterBand;
+
         
         public Data.Data data;
         public Hero hero1;
@@ -162,6 +163,7 @@ namespace Game
                                         //монстр умирает 
                                         monsterBand.monster1.GetComponent<Animator>().SetTrigger("Die");
                                         deadEnemy++;
+                                        print("смертb 1");
                                     }
                                 }
                                 break;
@@ -173,6 +175,7 @@ namespace Game
                                         //монстр умирает
                                         monsterBand.monster2.GetComponent<Animator>().SetTrigger("Die");
                                         deadEnemy++;
+                                        print("смертb 2");
                                     }
                                 }
                                 break;
@@ -184,6 +187,7 @@ namespace Game
                                         //монстр умирает
                                         monsterBand.monster3.GetComponent<Animator>().SetTrigger("Die");
                                         deadEnemy++;
+                                        print("смертb 3");
                                     }
                                 }
                                 break;
@@ -202,7 +206,7 @@ namespace Game
                                     {
                                         //монстр умирает
                                         monsterBand.monster1.GetComponent<Animator>().SetTrigger("Die");
-                                        deadEnemy++;
+                                        deadEnemy++;                                       
                                     }
                                 }
 
