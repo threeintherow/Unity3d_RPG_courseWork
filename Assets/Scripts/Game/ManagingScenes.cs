@@ -27,10 +27,10 @@ namespace Game
 
         public void SetNextLevel()
         {
-            int nextScene = Random.Range(2, SceneManager.sceneCountInBuildSettings);
+            int nextScene = Random.Range(1, SceneManager.sceneCountInBuildSettings);
             while(nextScene == SceneManager.GetActiveScene().buildIndex)
             {
-                nextScene = Random.Range(2, SceneManager.sceneCountInBuildSettings);
+                nextScene = Random.Range(1, SceneManager.sceneCountInBuildSettings);
             }
             DataInteraction.lastSaved = SceneManager.GetActiveScene().buildIndex;
 

@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using Game;
-using Unity.UNetWeaver;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = System.Random;
