@@ -24,6 +24,38 @@ public class PanelOpener : MonoBehaviour
             Upt();
     }
 
+    private void Update()
+    {
+        switch(gameInteraction.chosenEnemy)
+        {
+            case 1:
+                healthSlider.maxValue = monsterBand.monster1.maxHp;
+                healthSlider.value = monsterBand.monster1.health;               
+                health.text = monsterBand.monster1.health.ToString() + "/" + monsterBand.monster1.maxHp.ToString();
+                damage.text = monsterBand.monster1.damage.ToString();
+                physicalResist.text = monsterBand.monster1.physicalResist.ToString();
+                spellResist.text = monsterBand.monster1.magicResist.ToString();
+                break;
+            case 2:
+                healthSlider.maxValue = monsterBand.monster2.maxHp;
+                healthSlider.value = monsterBand.monster2.health;               
+                health.text = monsterBand.monster2.health.ToString() + "/" + monsterBand.monster2.maxHp.ToString();
+                damage.text = monsterBand.monster2.damage.ToString();
+                physicalResist.text = monsterBand.monster2.physicalResist.ToString();
+                spellResist.text = monsterBand.monster2.magicResist.ToString();
+                break;
+            case 3:
+                healthSlider.maxValue = monsterBand.monster3.maxHp;
+                healthSlider.value = monsterBand.monster3.health;
+                health.text = monsterBand.monster3.health.ToString() + "/" + monsterBand.monster3.maxHp.ToString();
+                damage.text = monsterBand.monster3.damage.ToString();
+                physicalResist.text = monsterBand.monster3.physicalResist.ToString();
+                spellResist.text = monsterBand.monster3.magicResist.ToString();
+                break;
+                
+        }
+    }
+
     public void Upt()
     {
         bool isActive = monsterPanel.activeSelf;
@@ -102,7 +134,7 @@ public class PanelOpener : MonoBehaviour
     
     public void Win(int expForWin)
     {
-        if (gameInteraction.deadEnemy > 3)
+        if (gameInteraction.deadEnemy > 2)
         {
             winPanel.SetActive(true);
             expGained.text = expForWin.ToString();    
