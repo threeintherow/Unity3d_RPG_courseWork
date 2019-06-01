@@ -36,6 +36,7 @@ namespace Game
         public Hero hero3;
 
         public bool heroTurn = true;
+        public bool heroAlreadyAttack;
 
         private int turnhero;
         private int turnEnemy;
@@ -56,7 +57,7 @@ namespace Game
 
         private void Update()
         {
-            if(heroTurn == false && deadHero < 4)
+            if(heroTurn == false/* && deadHero < 4*/)
             {
                 switch(turnEnemy)
                 {
@@ -149,231 +150,237 @@ namespace Game
                 {
                     turnEnemy = 1;
                 }
+
+                heroAlreadyAttack = false;
             }
         }
 
         public void Battle()
         {
-            if(chosenEnemy == 0)
+            if(!heroAlreadyAttack)
             {
-                return;
-            }
-            else
-            {
-                switch(turnhero)
+                heroAlreadyAttack = true;
+                if(chosenEnemy == 0)
                 {
-                    case 1:
-                        switch(chosenEnemy)
-                        {
-                            case 1:
-                                if(!monsterBand.monster1.isDied())
-                                {
-                                    if(monsterBand.monster1.TakeDamage(hero1.damage, hero1.typeOfDamage))
+                    return;
+                }
+                else
+                {
+                    switch(turnhero)
+                    {
+                        case 1:
+                            switch(chosenEnemy)
+                            {
+                                case 1:
+                                    if(!monsterBand.monster1.isDied())
                                     {
-                                        //монстр умирает 
-                                        monsterBand.monster1.GetComponent<Animator>().SetTrigger("Die");
-                                        deadEnemy++;
-                                       
-                                        print("смертb 1");
+                                        if(monsterBand.monster1.TakeDamage(hero1.damage, hero1.typeOfDamage))
+                                        {
+                                            //монстр умирает 
+                                            monsterBand.monster1.GetComponent<Animator>().SetTrigger("Die");
+                                            deadEnemy++;
+                                           
+                                            print("смертb 1");
+                                        }
+                                        else
+                                        {
+                                            monsterBand.monster1.GetComponent<Animator>().SetTrigger("GetDamage");
+                                        }
+                                    }
+                                    break;
+                                case 2:
+                                    if(!monsterBand.monster2.isDied())
+                                    {
+                                        if(monsterBand.monster2.TakeDamage(hero1.damage, hero1.typeOfDamage))
+                                        {
+                                            //монстр умирает
+                                            monsterBand.monster2.GetComponent<Animator>().SetTrigger("Die");
+                                            deadEnemy++;
+                                            print("смертb 2");
+                                        }
+                                        else
+                                        {
+                                            monsterBand.monster2.GetComponent<Animator>().SetTrigger("GetDamage");
+                                        }
+                                    }
+                                    break;
+                                case 3:
+                                    if(!monsterBand.monster3.isDied())
+                                    {
+                                        if(monsterBand.monster3.TakeDamage(hero1.damage, hero1.typeOfDamage))
+                                        {
+                                            //монстр умирает
+                                            monsterBand.monster3.GetComponent<Animator>().SetTrigger("Die");
+                                            deadEnemy++;
+                                            print("смертb 3");
+                                        }
+                                        else
+                                        {
+                                            monsterBand.monster3.GetComponent<Animator>().SetTrigger("GetDamage");
+                                        }
+                                    }
+                                    break;
+                            }
+                            hero1.GetComponent<Animator>().SetTrigger("Attack");
+                            hero1GameObject.transform.Rotate(0, 27.275f, 0);
+                            turnhero++;
+                            break;
+                        case 2:
+                            switch(chosenEnemy)
+                            {
+                                case 1:
+                                    if(!monsterBand.monster1.isDied())
+                                    {
+                                        if(monsterBand.monster1.TakeDamage(hero2.damage, hero2.typeOfDamage))
+                                        {
+                                            //монстр умирает
+                                            monsterBand.monster1.GetComponent<Animator>().SetTrigger("Die");
+                                            deadEnemy++;                                       
+                                        }
                                     }
                                     else
                                     {
                                         monsterBand.monster1.GetComponent<Animator>().SetTrigger("GetDamage");
                                     }
-                                }
-                                break;
-                            case 2:
-                                if(!monsterBand.monster2.isDied())
-                                {
-                                    if(monsterBand.monster2.TakeDamage(hero1.damage, hero1.typeOfDamage))
+    
+                                    break;
+                                case 2:
+                                    if(!monsterBand.monster2.isDied())
                                     {
-                                        //монстр умирает
-                                        monsterBand.monster2.GetComponent<Animator>().SetTrigger("Die");
-                                        deadEnemy++;
-                                        print("смертb 2");
+                                        if(monsterBand.monster2.TakeDamage(hero2.damage, hero2.typeOfDamage))
+                                        {
+                                            //монстр умирает
+                                            monsterBand.monster2.GetComponent<Animator>().SetTrigger("Die");
+                                            deadEnemy++;
+                                        }
                                     }
                                     else
                                     {
                                         monsterBand.monster2.GetComponent<Animator>().SetTrigger("GetDamage");
                                     }
-                                }
-                                break;
-                            case 3:
-                                if(!monsterBand.monster3.isDied())
-                                {
-                                    if(monsterBand.monster3.TakeDamage(hero1.damage, hero1.typeOfDamage))
+    
+                                    break;
+                                case 3:
+                                    if(!monsterBand.monster3.isDied())
                                     {
-                                        //монстр умирает
-                                        monsterBand.monster3.GetComponent<Animator>().SetTrigger("Die");
-                                        deadEnemy++;
-                                        print("смертb 3");
+                                        if(monsterBand.monster3.TakeDamage(hero2.damage, hero2.typeOfDamage))
+                                        {
+                                            //монстр умирает
+                                            monsterBand.monster3.GetComponent<Animator>().SetTrigger("Die");
+                                            deadEnemy++;
+                                        }
                                     }
                                     else
                                     {
                                         monsterBand.monster3.GetComponent<Animator>().SetTrigger("GetDamage");
                                     }
-                                }
-                                break;
-                        }
-                        hero1.GetComponent<Animator>().SetTrigger("Attack");
-                        hero1GameObject.transform.Rotate(0, 27.275f, 0);
-                        turnhero++;
-                        break;
-                    case 2:
-                        switch(chosenEnemy)
+    
+                                    break;
+                            }
+                            hero2.GetComponent<Animator>().SetTrigger("Attack");
+                            hero2GameObject.transform.Rotate(0, 27.275f, 0);
+                            turnhero++;
+                            break;
+                        case 3:
+                            switch(chosenEnemy)
+                            {
+                                case 1:
+                                    if(!monsterBand.monster1.isDied())
+                                    {
+                                        if(monsterBand.monster1.TakeDamage(hero3.damage, hero3.typeOfDamage))
+                                        {
+                                            //монстр умирает
+                                            monsterBand.monster1.GetComponent<Animator>().SetTrigger("Die");
+                                            deadEnemy++;
+                                        }
+                                        else
+                                        {
+                                            monsterBand.monster1.GetComponent<Animator>().SetTrigger("GetDamage");
+                                        }
+                                    }
+    
+                                    break;
+                                case 2:
+                                    if(!monsterBand.monster2.isDied())
+                                    {
+                                        if(monsterBand.monster2.TakeDamage(hero3.damage, hero3.typeOfDamage))
+                                        {
+                                            //монстр умирает
+                                            monsterBand.monster2.GetComponent<Animator>().SetTrigger("Die");
+                                            deadEnemy++;
+                                        }
+                                        else
+                                        {
+                                            monsterBand.monster2.GetComponent<Animator>().SetTrigger("GetDamage");
+                                        }
+                                    }
+    
+                                    break;
+                                case 3:
+                                    if(!monsterBand.monster3.isDied())
+                                    {
+                                        if(monsterBand.monster3.TakeDamage(hero3.damage, hero3.typeOfDamage))
+                                        {
+                                            //монстр умирает
+                                            monsterBand.monster3.GetComponent<Animator>().SetTrigger("Die");
+                                            deadEnemy++;
+                                        }
+                                        else
+                                        {
+                                            monsterBand.monster3.GetComponent<Animator>().SetTrigger("GetDamage");
+                                        }
+                                    }
+    
+                                    break;
+                            }
+                            hero3.GetComponent<Animator>().SetTrigger("Attack");
+                            hero3GameObject.transform.Rotate(0, 27.275f, 0);
+                            turnhero++;
+                            
+                            break;
+                    }
+    
+                    if(turnhero > 3)
+                    {
+                        turnhero = 1;
+                    }
+    
+                    panelOpener.Upt();
+                    
+                    heroTurn = false;
+                    
+                    if(deadEnemy >= 3)
+                    {
+                        //SceneManager.LoadScene(Random.Range(2, SceneManager.sceneCountInBuildSettings));
+    
+                        winPanel.SetActive(true);
+    
+                        int expForWin = (monsterBand.monster1.maxHp + monsterBand.monster2.maxHp + monsterBand.monster3.maxHp) / 10;
+    
+    
+                        hero1.experience += expForWin;
+                        if (hero1.experience >= hero1.experienceMax)
                         {
-                            case 1:
-                                if(!monsterBand.monster1.isDied())
-                                {
-                                    if(monsterBand.monster1.TakeDamage(hero2.damage, hero2.typeOfDamage))
-                                    {
-                                        //монстр умирает
-                                        monsterBand.monster1.GetComponent<Animator>().SetTrigger("Die");
-                                        deadEnemy++;                                       
-                                    }
-                                }
-                                else
-                                {
-                                    monsterBand.monster1.GetComponent<Animator>().SetTrigger("GetDamage");
-                                }
-
-                                break;
-                            case 2:
-                                if(!monsterBand.monster2.isDied())
-                                {
-                                    if(monsterBand.monster2.TakeDamage(hero2.damage, hero2.typeOfDamage))
-                                    {
-                                        //монстр умирает
-                                        monsterBand.monster2.GetComponent<Animator>().SetTrigger("Die");
-                                        deadEnemy++;
-                                    }
-                                }
-                                else
-                                {
-                                    monsterBand.monster2.GetComponent<Animator>().SetTrigger("GetDamage");
-                                }
-
-                                break;
-                            case 3:
-                                if(!monsterBand.monster3.isDied())
-                                {
-                                    if(monsterBand.monster3.TakeDamage(hero2.damage, hero2.typeOfDamage))
-                                    {
-                                        //монстр умирает
-                                        monsterBand.monster3.GetComponent<Animator>().SetTrigger("Die");
-                                        deadEnemy++;
-                                    }
-                                }
-                                else
-                                {
-                                    monsterBand.monster3.GetComponent<Animator>().SetTrigger("GetDamage");
-                                }
-
-                                break;
+                            hero1.experience = hero1.experienceMax - hero1.experience;
+                            DataInteraction.GetHero(1).IncreaseLevel();
                         }
-                        hero2.GetComponent<Animator>().SetTrigger("Attack");
-                        hero2GameObject.transform.Rotate(0, 27.275f, 0);
-                        turnhero++;
-                        break;
-                    case 3:
-                        switch(chosenEnemy)
+    
+                        hero2.experience += expForWin;
+                        if (hero2.experience >= hero2.experienceMax)
                         {
-                            case 1:
-                                if(!monsterBand.monster1.isDied())
-                                {
-                                    if(monsterBand.monster1.TakeDamage(hero3.damage, hero3.typeOfDamage))
-                                    {
-                                        //монстр умирает
-                                        monsterBand.monster1.GetComponent<Animator>().SetTrigger("Die");
-                                        deadEnemy++;
-                                    }
-                                    else
-                                    {
-                                        monsterBand.monster1.GetComponent<Animator>().SetTrigger("GetDamage");
-                                    }
-                                }
-
-                                break;
-                            case 2:
-                                if(!monsterBand.monster2.isDied())
-                                {
-                                    if(monsterBand.monster2.TakeDamage(hero3.damage, hero3.typeOfDamage))
-                                    {
-                                        //монстр умирает
-                                        monsterBand.monster2.GetComponent<Animator>().SetTrigger("Die");
-                                        deadEnemy++;
-                                    }
-                                    else
-                                    {
-                                        monsterBand.monster2.GetComponent<Animator>().SetTrigger("GetDamage");
-                                    }
-                                }
-
-                                break;
-                            case 3:
-                                if(!monsterBand.monster3.isDied())
-                                {
-                                    if(monsterBand.monster3.TakeDamage(hero3.damage, hero3.typeOfDamage))
-                                    {
-                                        //монстр умирает
-                                        monsterBand.monster3.GetComponent<Animator>().SetTrigger("Die");
-                                        deadEnemy++;
-                                    }
-                                    else
-                                    {
-                                        monsterBand.monster3.GetComponent<Animator>().SetTrigger("GetDamage");
-                                    }
-                                }
-
-                                break;
+                            hero2.experience = hero2.experienceMax - hero2.experience;
+                            DataInteraction.GetHero(1).IncreaseLevel();
                         }
-                        hero3.GetComponent<Animator>().SetTrigger("Attack");
-                        hero3GameObject.transform.Rotate(0, 27.275f, 0);
-                        turnhero++;
-                        
-                        break;
-                }
-
-                if(turnhero > 3)
-                {
-                    turnhero = 1;
-                }
-
-                panelOpener.Upt();
-                
-                heroTurn = false;
-                
-                if(deadEnemy >= 3)
-                {
-                    //SceneManager.LoadScene(Random.Range(2, SceneManager.sceneCountInBuildSettings));
-
-                    winPanel.SetActive(true);
-
-                    int expForWin = (monsterBand.monster1.maxHp + monsterBand.monster2.maxHp + monsterBand.monster3.maxHp) / 10;
-
-
-                    hero1.experience += expForWin;
-                    if (hero1.experience >= hero1.experienceMax)
-                    {
-                        hero1.experience = hero1.experienceMax - hero1.experience;
-                        DataInteraction.GetHero(1).IncreaseLevel();
+    
+                        hero3.experience += expForWin;
+                        if (hero3.experience >= hero3.experienceMax)
+                        {
+                            hero3.experience = hero3.experienceMax - hero3.experience;
+                            DataInteraction.GetHero(1).IncreaseLevel();
+                        }
+    
+                        expText.text = expForWin.ToString();
                     }
-
-                    hero2.experience += expForWin;
-                    if (hero2.experience >= hero2.experienceMax)
-                    {
-                        hero2.experience = hero2.experienceMax - hero2.experience;
-                        DataInteraction.GetHero(1).IncreaseLevel();
-                    }
-
-                    hero3.experience += expForWin;
-                    if (hero3.experience >= hero3.experienceMax)
-                    {
-                        hero3.experience = hero3.experienceMax - hero3.experience;
-                        DataInteraction.GetHero(1).IncreaseLevel();
-                    }
-
-                    expText.text = expForWin.ToString();
                 }
             }
         }
