@@ -20,6 +20,10 @@ namespace StatsScene
         public Text spellResist1;
         public Text spellResist2;
         public Text spellResist3;
+
+        public Text lvl1;
+        public Text lvl2;
+        public Text lvl3;
         
     
         public Text hp1;
@@ -85,6 +89,10 @@ namespace StatsScene
             
             physicalResist3.text = DataInteraction.GetHero(3).physicalResist.ToString();
             spellResist3.text = DataInteraction.GetHero(3).magicResist.ToString();
+
+            lvl1.text = DataInteraction.GetHero(1).level.ToString();
+            lvl2.text = DataInteraction.GetHero(2).level.ToString();
+            lvl3.text = DataInteraction.GetHero(3).level.ToString();
             
             classType1.text = GetClass(DataInteraction.GetHero(1).classOfHero);
             classType2.text = GetClass(DataInteraction.GetHero(2).classOfHero);

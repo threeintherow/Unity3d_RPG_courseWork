@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class PanelOpener : MonoBehaviour
 {
     public GameObject monsterPanel;
-    public GameObject winPanel;
     public GameInteraction gameInteraction;
     public MonsterBand monsterBand;
 
@@ -16,7 +15,6 @@ public class PanelOpener : MonoBehaviour
     public Text physicalResist;
     public Text spellResist;
     public Text health;
-    public Text expGained;
 
     public Slider healthSlider;
     public void OnMouseDown()
@@ -98,16 +96,6 @@ public class PanelOpener : MonoBehaviour
                 spellResist.text = monsterBand.monster3.magicResist.ToString();  
             }                
         }                 
-    }
-    
-    public void Win(int expForWin)
-    {
-        if (gameInteraction.deadEnemy > 3)
-        {
-            winPanel.SetActive(true);
-            expGained.text = expForWin.ToString();    
-        }
-        
-    }
+    } 
 }
 

@@ -2,6 +2,7 @@
 using Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 namespace Game
@@ -13,6 +14,7 @@ namespace Game
         public PanelOpener panelOpener;
         public GameObject gameObject;
         public MonsterBand monsterBand;
+
         
         public Data.Data data;
         public Hero hero1;
@@ -153,6 +155,7 @@ namespace Game
                                         //монстр умирает 
                                         monsterBand.monster1.GetComponent<Animator>().SetTrigger("Die");
                                         deadEnemy++;
+                                        print("смертb 1");
                                     }
                                 }
                                 break;
@@ -164,6 +167,7 @@ namespace Game
                                         //монстр умирает
                                         monsterBand.monster2.GetComponent<Animator>().SetTrigger("Die");
                                         deadEnemy++;
+                                        print("смертb 2");
                                     }
                                 }
                                 break;
@@ -175,6 +179,7 @@ namespace Game
                                         //монстр умирает
                                         monsterBand.monster3.GetComponent<Animator>().SetTrigger("Die");
                                         deadEnemy++;
+                                        print("смертb 3");
                                     }
                                 }
                                 break;
@@ -191,7 +196,7 @@ namespace Game
                                     {
                                         //монстр умирает
                                         monsterBand.monster1.GetComponent<Animator>().SetTrigger("Die");
-                                        deadEnemy++;
+                                        deadEnemy++;                                       
                                     }
                                 }
 
@@ -270,20 +275,37 @@ namespace Game
                 panelOpener.Upt();
                 heroTurn = false;
                 
-                if(deadEnemy > 3)
+                if(deadEnemy >= 3)
                 {
-                    SceneManager.LoadScene(Random.Range(2, SceneManager.sceneCountInBuildSettings));
-                    int expForWin = (monsterBand.monster1.health + monsterBand.monster2.health + monsterBand.monster3.health) / 10;
+                    //SceneManager.LoadScene(Random.Range(2, SceneManager.sceneCountInBuildSettings));
+                   
+                    winPanel.SetActive(true);
+                    
+                    int expForWin = (monsterBand.monster1.maxHp + monsterBand.monster2.maxHp + monsterBand.monster3.maxHp) / 10;
 
-                    for (int i = 0; i < 3; i++)
-                    {
-                        DataInteraction.GetHero(i).experience += expForWin;
-                        if (DataInteraction.GetHero(i).experience >= DataInteraction.GetHero(i).experienceMax)
+                    
+                        hero1.experience += expForWin;
+                        if (hero1.experience >= hero1.experienceMax)
                         {
-                            DataInteraction.GetHero(i).experience = DataInteraction.GetHero(i).experienceMax - DataInteraction.GetHero(1).experience;
-                            DataInteraction.GetHero(i).IncreaseLevel();
+                            hero1.experience = hero1.experienceMax - hero1.experience;
+                            DataInteraction.GetHero(1).IncreaseLevel();
                         }
-                    }
+                        
+                        hero2.experience += expForWin;
+                        if (hero2.experience >= hero2.experienceMax)
+                        {
+                            hero2.experience = hero2.experienceMax - hero2.experience;
+                            DataInteraction.GetHero(1).IncreaseLevel();
+                        }
+                        
+                        hero3.experience += expForWin;
+                        if (hero3.experience >= hero3.experienceMax)
+                        {
+                            hero3.experience = hero3.experienceMax - hero3.experience;
+                            DataInteraction.GetHero(1).IncreaseLevel();
+                        }
+                    
+                    expText.text = expForWin.ToString();
                 }
             }
         }

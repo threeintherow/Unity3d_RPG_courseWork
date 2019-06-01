@@ -12914,6 +12914,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1673117087}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &780198012 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8789034132285728606, guid: eb370625809f4ff44a023c2de39ce9e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 4198858338383225841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &781825958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12995,10 +13001,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1613706919}
     m_Modifications:
-    - target: {fileID: 100000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
-      propertyPath: m_Name
-      value: Wall
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30.10849
@@ -13054,6 +13056,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.8770894
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
+      propertyPath: m_Name
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
@@ -13245,14 +13251,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterPanel: {fileID: 348632161}
-  winPanel: {fileID: 0}
   gameInteraction: {fileID: 870135227}
   monsterBand: {fileID: 1667390622}
   damage: {fileID: 1378326164}
   physicalResist: {fileID: 153716401}
   spellResist: {fileID: 1988125993}
   health: {fileID: 322260630}
-  expGained: {fileID: 0}
   healthSlider: {fileID: 1521645504}
 --- !u!114 &842667095
 MonoBehaviour:
@@ -13397,9 +13401,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896a5603648d54b428bbad2a462d7fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelOpener: {fileID: 0}
+  panelOpener: {fileID: 1781006034}
   gameObject: {fileID: 730389812}
   monsterBand: {fileID: 1667390622}
+  winPanel: {fileID: 780198012}
+  expGained: {fileID: 4198858338383225843}
   data: {fileID: 1527641980}
   hero1: {fileID: 184168351}
   hero2: {fileID: 1073169042}
@@ -13825,7 +13831,7 @@ RectTransform:
   - {fileID: 348632162}
   - {fileID: 4198858338383225842}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -13839,10 +13845,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1613706919}
     m_Modifications:
-    - target: {fileID: 100000, guid: 38cb9c677cc9cf849a7e755877f61eb5, type: 3}
-      propertyPath: m_Name
-      value: Wall
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 38cb9c677cc9cf849a7e755877f61eb5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.99151
@@ -13894,6 +13896,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 38cb9c677cc9cf849a7e755877f61eb5, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5266991
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 38cb9c677cc9cf849a7e755877f61eb5, type: 3}
+      propertyPath: m_Name
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38cb9c677cc9cf849a7e755877f61eb5, type: 3}
@@ -18781,7 +18787,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1001 &1108665714
 PrefabInstance:
@@ -18790,10 +18796,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1613706919}
     m_Modifications:
-    - target: {fileID: 100000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
-      propertyPath: m_Name
-      value: Wall
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 22.191511
@@ -18849,6 +18851,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.8770884
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
+      propertyPath: m_Name
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
@@ -23603,7 +23609,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!4 &1113838080 stripped
 Transform:
@@ -23962,14 +23968,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterPanel: {fileID: 348632161}
-  winPanel: {fileID: 0}
   gameInteraction: {fileID: 870135227}
   monsterBand: {fileID: 1667390622}
   damage: {fileID: 1378326164}
   physicalResist: {fileID: 153716401}
   spellResist: {fileID: 1988125993}
   health: {fileID: 322260630}
-  expGained: {fileID: 0}
   healthSlider: {fileID: 1521645504}
 --- !u!54 &1235311612
 Rigidbody:
@@ -24023,10 +24027,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1613706919}
     m_Modifications:
-    - target: {fileID: 100000, guid: 38cb9c677cc9cf849a7e755877f61eb5, type: 3}
-      propertyPath: m_Name
-      value: Wall (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 38cb9c677cc9cf849a7e755877f61eb5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.5
@@ -24078,6 +24078,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 38cb9c677cc9cf849a7e755877f61eb5, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5267007
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 38cb9c677cc9cf849a7e755877f61eb5, type: 3}
+      propertyPath: m_Name
+      value: Wall (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38cb9c677cc9cf849a7e755877f61eb5, type: 3}
@@ -34195,7 +34199,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!4 &1451338245 stripped
 Transform:
@@ -34537,10 +34541,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1613706919}
     m_Modifications:
-    - target: {fileID: 100000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
-      propertyPath: m_Name
-      value: Wall
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.791512
@@ -34596,6 +34596,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.8770883
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
+      propertyPath: m_Name
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79fda544a7815ff43b3b61ff0acfe9c1, type: 3}
@@ -39898,10 +39902,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 828325223}
     m_Modifications:
-    - target: {fileID: 100000, guid: 31ebd80d3f64ab74b98898947c055382, type: 3}
-      propertyPath: m_Name
-      value: Gate
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 31ebd80d3f64ab74b98898947c055382, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.4084895
@@ -39945,6 +39945,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 31ebd80d3f64ab74b98898947c055382, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 31ebd80d3f64ab74b98898947c055382, type: 3}
+      propertyPath: m_Name
+      value: Gate
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 31ebd80d3f64ab74b98898947c055382, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -40056,14 +40060,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterPanel: {fileID: 348632161}
-  winPanel: {fileID: 0}
   gameInteraction: {fileID: 870135227}
   monsterBand: {fileID: 1667390622}
   damage: {fileID: 1378326164}
   physicalResist: {fileID: 153716401}
   spellResist: {fileID: 1988125993}
   health: {fileID: 322260630}
-  expGained: {fileID: 0}
   healthSlider: {fileID: 1521645504}
 --- !u!65 &1698693057
 BoxCollider:
@@ -40324,10 +40326,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1576602621}
     m_Modifications:
-    - target: {fileID: 100000, guid: b2fa3fb20b986114f94dfa86ff76242a, type: 3}
-      propertyPath: m_Name
-      value: Idol 6
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b2fa3fb20b986114f94dfa86ff76242a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21.90849
@@ -40383,6 +40381,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: b2fa3fb20b986114f94dfa86ff76242a, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0263048
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b2fa3fb20b986114f94dfa86ff76242a, type: 3}
+      propertyPath: m_Name
+      value: Idol 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2fa3fb20b986114f94dfa86ff76242a, type: 3}
@@ -40457,6 +40459,57 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e160064d4d12e446ab9ded16202c5e9, type: 3}
+--- !u!1 &1781006033
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1781006035}
+  - component: {fileID: 1781006034}
+  m_Layer: 0
+  m_Name: PanelOp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1781006034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781006033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b6d580ba768aae4f8026c796ce38c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterPanel: {fileID: 348632161}
+  gameInteraction: {fileID: 870135227}
+  monsterBand: {fileID: 1667390622}
+  damage: {fileID: 1378326164}
+  physicalResist: {fileID: 153716401}
+  spellResist: {fileID: 1988125993}
+  health: {fileID: 322260630}
+  healthSlider: {fileID: 1521645504}
+--- !u!4 &1781006035
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781006033}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.656596, y: 1.5384884, z: -28.477139}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1795614603 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 64d53eaf0a7b1bf4c95c0f47de0d7cd4,
@@ -41457,6 +41510,36 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4006544643908984531, guid: eb370625809f4ff44a023c2de39ce9e2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006544643908984531, guid: eb370625809f4ff44a023c2de39ce9e2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006544643908984531, guid: eb370625809f4ff44a023c2de39ce9e2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006544643908984531, guid: eb370625809f4ff44a023c2de39ce9e2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1681342668}
+    - target: {fileID: 4006544643908984531, guid: eb370625809f4ff44a023c2de39ce9e2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetNextLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006544643908984531, guid: eb370625809f4ff44a023c2de39ce9e2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb370625809f4ff44a023c2de39ce9e2, type: 3}
 --- !u!224 &4198858338383225842 stripped
@@ -41465,3 +41548,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4198858338383225841}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4198858338383225843 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6546904423123736362, guid: eb370625809f4ff44a023c2de39ce9e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 4198858338383225841}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
