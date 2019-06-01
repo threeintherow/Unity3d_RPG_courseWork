@@ -1,5 +1,6 @@
 ﻿using Characters;
 using Data;
+using StatsScene;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -20,7 +21,8 @@ namespace Game
 
         public GameObject winPanel;
         public GameObject stats;
-        
+
+        public StatsScript statsScript;
         public Text expText;
         public PanelOpener panelOpener;
         public GameObject gameObject;
@@ -456,6 +458,7 @@ namespace Game
         }
         public void StatsEnable()
         {
+            statsScript.EnableStats();
             stats.SetActive(true); 
         }
 

@@ -58,6 +58,9 @@ namespace Characters
             this.level = hero.level;
             this.classOfHero = hero.classOfHero;
             this.health = hero.health;
+            this.healthMax = hero.healthMax;
+            this.experience = hero.experience;
+            this.experienceMax = hero.experienceMax;
             this.typeOfDamage = hero.typeOfDamage;
             this.magicResist = hero.magicResist;
             this.physicalResist = hero.physicalResist;

@@ -16239,7 +16239,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0.02734375, y: 0.125, z: 0.02734375, w: -0.04296875}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 4.556893e-16}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -23363,8 +23363,25 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenStats
       objectReference: {fileID: 0}
+    - target: {fileID: 2523336952702302716, guid: 28eb9b53a26bfff4282b98fbc4794321,
+        type: 3}
+      propertyPath: gameInteraction
+      value: 
+      objectReference: {fileID: 1209681333}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28eb9b53a26bfff4282b98fbc4794321, type: 3}
+--- !u!114 &1165459566 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2523336952702302716, guid: 28eb9b53a26bfff4282b98fbc4794321,
+    type: 3}
+  m_PrefabInstance: {fileID: 1165459565}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296959826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c863e6a4714da488ab0bc375f24fb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1182903433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23599,6 +23616,7 @@ MonoBehaviour:
   hero3GameObject: {fileID: 285873402}
   winPanel: {fileID: 1871919490}
   stats: {fileID: 296959826}
+  statsScript: {fileID: 1165459566}
   expText: {fileID: 431055628}
   panelOpener: {fileID: 1182903436}
   gameObject: {fileID: 1833172129}
@@ -29518,7 +29536,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0.0000033974682, y: -1, z: 0.0044905692, w: 0.830346}
+  m_BoundingSphereOverride: {x: 4.257e-42, y: 3.5808847e-16, z: 7.52e-43, w: 4.64e-43}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -36356,7 +36374,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0.00000043213393, y: -1, z: 0, w: -1}
+  m_BoundingSphereOverride: {x: 7.52e-43, y: 2.999926e-16, z: 7.52e-43, w: 4.19e-43}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
