@@ -583,7 +583,7 @@ GameObject:
   - component: {fileID: 165925227}
   - component: {fileID: 165925226}
   m_Layer: 0
-  m_Name: Particle System (12)
+  m_Name: Particle System8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -681,8 +681,8 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
-  playOnAwake: 1
+  prewarm: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -5362,7 +5362,7 @@ GameObject:
   - component: {fileID: 203948042}
   - component: {fileID: 203948041}
   m_Layer: 0
-  m_Name: Particle System (8)
+  m_Name: Particle System6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5460,8 +5460,8 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
-  playOnAwake: 1
+  prewarm: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -20440,7 +20440,7 @@ GameObject:
   - component: {fileID: 429171065}
   - component: {fileID: 429171064}
   m_Layer: 0
-  m_Name: Particle System (13)
+  m_Name: Particle System7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20538,8 +20538,8 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
-  playOnAwake: 1
+  prewarm: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -26157,7 +26157,7 @@ GameObject:
   - component: {fileID: 684338974}
   - component: {fileID: 684338973}
   m_Layer: 0
-  m_Name: Particle System (14)
+  m_Name: Particle System9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26255,8 +26255,8 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
-  playOnAwake: 1
+  prewarm: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -30844,6 +30844,60 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &695394820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 695394822}
+  - component: {fileID: 695394821}
+  m_Layer: 0
+  m_Name: TrapManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &695394821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695394820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1de3650ecc0e654f80efc0e08bef425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameInteraction: {fileID: 469125383}
+  f1: {fileID: 1141378058}
+  f2: {fileID: 1688417607}
+  f3: {fileID: 1740610937}
+  f4: {fileID: 1869790357}
+  f5: {fileID: 1592135965}
+  f6: {fileID: 203948039}
+  f7: {fileID: 429171062}
+  f8: {fileID: 165925224}
+  f9: {fileID: 684338971}
+  ms: {fileID: 2043910163}
+--- !u!4 &695394822
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695394820}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0007560402, y: 10.83406, z: -7.5846}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &733884014
 GameObject:
   m_ObjectHideFlags: 0
@@ -31847,8 +31901,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2043910163}
-        m_MethodName: SetScene
+      - m_Target: {fileID: 2043910162}
+        m_MethodName: 
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -32609,7 +32663,7 @@ GameObject:
   - component: {fileID: 1141378061}
   - component: {fileID: 1141378060}
   m_Layer: 0
-  m_Name: Particle System (10)
+  m_Name: Particle System1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32707,8 +32761,8 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
-  playOnAwake: 1
+  prewarm: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -43807,7 +43861,7 @@ GameObject:
   - component: {fileID: 1592135968}
   - component: {fileID: 1592135967}
   m_Layer: 0
-  m_Name: Particle System (6)
+  m_Name: Particle System5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43905,8 +43959,8 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
-  playOnAwake: 1
+  prewarm: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -53704,7 +53758,7 @@ GameObject:
   - component: {fileID: 1688417610}
   - component: {fileID: 1688417609}
   m_Layer: 0
-  m_Name: Particle System (9)
+  m_Name: Particle System2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53802,8 +53856,8 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
-  playOnAwake: 1
+  prewarm: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -58747,7 +58801,7 @@ GameObject:
   - component: {fileID: 1740610940}
   - component: {fileID: 1740610939}
   m_Layer: 0
-  m_Name: Particle System (11)
+  m_Name: Particle System3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58845,8 +58899,8 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
-  playOnAwake: 1
+  prewarm: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -63756,8 +63810,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2043910163}
-        m_MethodName: SetNextLevel
+      - m_Target: {fileID: 695394821}
+        m_MethodName: trap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -63858,7 +63912,7 @@ GameObject:
   - component: {fileID: 1869790360}
   - component: {fileID: 1869790359}
   m_Layer: 0
-  m_Name: Particle System (7)
+  m_Name: Particle System4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63956,8 +64010,8 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
-  playOnAwake: 1
+  prewarm: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
