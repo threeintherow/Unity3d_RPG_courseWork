@@ -57,6 +57,11 @@ namespace StatsScene
 
         public void Start()
         {
+            EnableStats();      
+        }
+
+        public void EnableStats()
+        {
             hp1.text = DataInteraction.GetHero(1).health.ToString() + "/" + DataInteraction.GetHero(1).healthMax.ToString();
             hpSlider1.value = DataInteraction.GetHero(1).health;
             hpSlider1.maxValue = DataInteraction.GetHero(1).healthMax;
@@ -116,9 +121,8 @@ namespace StatsScene
             luck3.text = DataInteraction.GetHero(3).luck.ToString();
             speed1.text = DataInteraction.GetHero(1).speed.ToString();
             speed2.text = DataInteraction.GetHero(2).speed.ToString();
-            speed3.text = DataInteraction.GetHero(3).speed.ToString();        
+            speed3.text = DataInteraction.GetHero(3).speed.ToString(); 
         }
-
         private string GetClass(int index)
         {
             switch (index)

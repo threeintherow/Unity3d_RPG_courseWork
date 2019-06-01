@@ -17,12 +17,16 @@ namespace Game
         public GameObject hero1GameObject;
         public GameObject hero2GameObject;
         public GameObject hero3GameObject;
+
         public GameObject winPanel;
+        public GameObject stats;
+        
         public Text expText;
         public PanelOpener panelOpener;
         public GameObject gameObject;
         public MonsterBand monsterBand;
 
+        public GameObject camera;
         
         public Data.Data data;
         public Hero hero1;
@@ -44,6 +48,7 @@ namespace Game
             hero1.classOfHero = 1;
             hero2.classOfHero = 2;
             hero3.classOfHero = 3;
+            stats.SetActive(false);
         }
 
 
@@ -78,6 +83,7 @@ namespace Game
                                 }
                                 break;
                         }
+                        monsterBand.monster1.GetComponent<Animator>().SetTrigger("Attack");
                         break;
                     case 2:
                         switch(Random.Range(1, 3))
@@ -104,6 +110,7 @@ namespace Game
                                 }
                                 break;
                         }
+                        monsterBand.monster2.GetComponent<Animator>().SetTrigger("Attack");
                         break;
                     case 3:
                         switch(Random.Range(1, 3))
@@ -130,6 +137,7 @@ namespace Game
                                 }
                                 break;
                         }
+                        monsterBand.monster3.GetComponent<Animator>().SetTrigger("Attack");
                         break;
                 }
                 panelOpener.Upt();
@@ -163,7 +171,12 @@ namespace Game
                                         //монстр умирает 
                                         monsterBand.monster1.GetComponent<Animator>().SetTrigger("Die");
                                         deadEnemy++;
+                                       
                                         print("смертb 1");
+                                    }
+                                    else
+                                    {
+                                        monsterBand.monster1.GetComponent<Animator>().SetTrigger("GetDamage");
                                     }
                                 }
                                 break;
@@ -177,6 +190,10 @@ namespace Game
                                         deadEnemy++;
                                         print("смертb 2");
                                     }
+                                    else
+                                    {
+                                        monsterBand.monster2.GetComponent<Animator>().SetTrigger("GetDamage");
+                                    }
                                 }
                                 break;
                             case 3:
@@ -189,12 +206,16 @@ namespace Game
                                         deadEnemy++;
                                         print("смертb 3");
                                     }
+                                    else
+                                    {
+                                        monsterBand.monster3.GetComponent<Animator>().SetTrigger("GetDamage");
+                                    }
                                 }
                                 break;
                         }
                         hero1.GetComponent<Animator>().SetTrigger("Attack");
                         hero1GameObject.transform.Rotate(0, 27.275f, 0);
-
+                        turnhero++;
                         break;
                     case 2:
                         switch(chosenEnemy)
@@ -209,6 +230,10 @@ namespace Game
                                         deadEnemy++;                                       
                                     }
                                 }
+                                else
+                                {
+                                    monsterBand.monster1.GetComponent<Animator>().SetTrigger("GetDamage");
+                                }
 
                                 break;
                             case 2:
@@ -220,6 +245,10 @@ namespace Game
                                         monsterBand.monster2.GetComponent<Animator>().SetTrigger("Die");
                                         deadEnemy++;
                                     }
+                                }
+                                else
+                                {
+                                    monsterBand.monster2.GetComponent<Animator>().SetTrigger("GetDamage");
                                 }
 
                                 break;
@@ -233,10 +262,16 @@ namespace Game
                                         deadEnemy++;
                                     }
                                 }
+                                else
+                                {
+                                    monsterBand.monster3.GetComponent<Animator>().SetTrigger("GetDamage");
+                                }
 
                                 break;
                         }
-
+                        hero2.GetComponent<Animator>().SetTrigger("Attack");
+                        hero2GameObject.transform.Rotate(0, 27.275f, 0);
+                        turnhero++;
                         break;
                     case 3:
                         switch(chosenEnemy)
@@ -250,6 +285,10 @@ namespace Game
                                         monsterBand.monster1.GetComponent<Animator>().SetTrigger("Die");
                                         deadEnemy++;
                                     }
+                                    else
+                                    {
+                                        monsterBand.monster1.GetComponent<Animator>().SetTrigger("GetDamage");
+                                    }
                                 }
 
                                 break;
@@ -261,6 +300,10 @@ namespace Game
                                         //монстр умирает
                                         monsterBand.monster2.GetComponent<Animator>().SetTrigger("Die");
                                         deadEnemy++;
+                                    }
+                                    else
+                                    {
+                                        monsterBand.monster2.GetComponent<Animator>().SetTrigger("GetDamage");
                                     }
                                 }
 
@@ -274,12 +317,24 @@ namespace Game
                                         monsterBand.monster3.GetComponent<Animator>().SetTrigger("Die");
                                         deadEnemy++;
                                     }
+                                    else
+                                    {
+                                        monsterBand.monster3.GetComponent<Animator>().SetTrigger("GetDamage");
+                                    }
                                 }
 
                                 break;
                         }
-
+                        hero3.GetComponent<Animator>().SetTrigger("Attack");
+                        hero3GameObject.transform.Rotate(0, 27.275f, 0);
+                        turnhero++;
+                        
                         break;
+                }
+
+                if(turnhero > 3)
+                {
+                    turnhero = 1;
                 }
 
                 panelOpener.Upt();
@@ -368,8 +423,40 @@ namespace Game
         {
             if(!gameObject.activeSelf)
             {
+                camera.transform.position = new Vector3(45, 45, 45);
                 gameObject.SetActive(true);
             }
+        }
+
+        /*public void OpenStats()
+        {
+            if(!stats.activeSelf)
+            {
+                stats.SetActive(true);
+            }
+        }*/
+        public void OpenStats()
+        {
+            if(!stats.activeSelf)
+            {
+                camera.transform.position = new Vector3(45, 45, 45);
+                StatsEnable();
+            }
+            else
+            {
+                camera.transform.position = new Vector3(-8.183913f, 8.72238f, -29.79492f);
+                StatsDisable();
+            }
+        }
+
+        public void StatsDisable()
+        {
+            stats.SetActive(false);
+            
+        }
+        public void StatsEnable()
+        {
+            stats.SetActive(true); 
         }
 
     }

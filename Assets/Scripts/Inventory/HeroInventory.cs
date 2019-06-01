@@ -43,7 +43,6 @@ namespace Inventory
 
         public void InventoryActive()
         {
-            print(Input.touchCount);
             if(panel.activeSelf)
             {
                 InventoryDisable();
@@ -62,6 +61,7 @@ namespace Inventory
             }
             drags.Clear();
             panel.SetActive(false);
+            gameInteraction.camera.transform.position = new Vector3(-8.183913f, 8.72238f, -29.79492f);
             
         }
 
