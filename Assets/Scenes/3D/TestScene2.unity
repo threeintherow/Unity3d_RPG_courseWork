@@ -16780,8 +16780,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 928720775}
-        m_MethodName: SetNextLevel
+      - m_Target: {fileID: 1209681333}
+        m_MethodName: Battle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23340,6 +23340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896a5603648d54b428bbad2a462d7fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panelOpener: {fileID: 0}
   gameObject: {fileID: 1833172129}
   monsterBand: {fileID: 804007285}
   data: {fileID: 428904818}
@@ -23348,6 +23349,8 @@ MonoBehaviour:
   hero3: {fileID: 285873403}
   heroTurn: 1
   chosenEnemy: 0
+  deadEnemy: 0
+  deadHero: 0
 --- !u!4 &1209681334
 Transform:
   m_ObjectHideFlags: 0
