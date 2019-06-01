@@ -17118,7 +17118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterPanel: {fileID: 1182903435}
-  winPanel: {fileID: 0}
+  winPanel: {fileID: 1921208017}
   gameInteraction: {fileID: 1209681333}
   monsterBand: {fileID: 804007285}
   damage: {fileID: 2082289662}
@@ -34972,7 +34972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterPanel: {fileID: 1182903435}
-  winPanel: {fileID: 0}
+  winPanel: {fileID: 1921208017}
   gameInteraction: {fileID: 1209681333}
   monsterBand: {fileID: 804007285}
   damage: {fileID: 2082289662}
@@ -36084,6 +36084,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000011324147078, guid: 6e160064d4d12e446ab9ded16202c5e9,
     type: 3}
   m_PrefabInstance: {fileID: 1777869643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1921208017 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8789034132285728606, guid: eb370625809f4ff44a023c2de39ce9e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1871919488}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1930608783 stripped
 MonoBehaviour:
@@ -41031,7 +41037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterPanel: {fileID: 1182903435}
-  winPanel: {fileID: 0}
+  winPanel: {fileID: 1921208017}
   gameInteraction: {fileID: 1209681333}
   monsterBand: {fileID: 804007285}
   damage: {fileID: 2082289662}
