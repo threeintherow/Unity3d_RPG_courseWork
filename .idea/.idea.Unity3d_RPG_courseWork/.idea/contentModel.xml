@@ -90,9 +90,6 @@
           <e p="TrapScene" t="Include">
             <e p="TrapRap.cs" t="Include" />
           </e>
-          <e p="V_dushe_ne_ebu_cho_eto_no_luche_ne_budu_trogat" t="Include">
-            <e p="SimpleCameraController.cs" t="Include" />
-          </e>
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

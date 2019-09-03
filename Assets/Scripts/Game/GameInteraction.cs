@@ -62,7 +62,7 @@ namespace Game
                 switch(turnEnemy)
                 {
                     case 1:
-                        switch(Random.Range(1, 3))
+                        switch(Random.Range(1, 4))
                         {
                             case 1:
                                 if(hero1.TakeDamage(monsterBand.monster1.damage, monsterBand.monster1.typeOfDamage))
@@ -89,7 +89,7 @@ namespace Game
                         monsterBand.monster1.GetComponent<Animator>().SetTrigger("Attack");
                         break;
                     case 2:
-                        switch(Random.Range(1, 3))
+                        switch(Random.Range(1, 4))
                         {
                             case 1:
                                 if(hero1.TakeDamage(monsterBand.monster2.damage, monsterBand.monster2.typeOfDamage))
@@ -116,7 +116,7 @@ namespace Game
                         monsterBand.monster2.GetComponent<Animator>().SetTrigger("Attack");
                         break;
                     case 3:
-                        switch(Random.Range(1, 3))
+                        switch(Random.Range(1, 4))
                         {
                             case 1:
                                 if(hero1.TakeDamage(monsterBand.monster3.damage, monsterBand.monster3.typeOfDamage))
